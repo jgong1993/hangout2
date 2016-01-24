@@ -1,0 +1,20 @@
+{
+  "name": "Hangouts R Us",
+  "description": "CSE170 project",
+  "version": "0.0.1",
+  "author": "Students of CSE170",
+
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/jgong1993/HangoutsRUs"
+  },
+  "license": "MIT",
+
+  "main": "server.js",
+  "dependencies": {
+    "express": "3.x"
+  },
+  "engines": {
+  	"node": "0.10.x"
+  }
+}
