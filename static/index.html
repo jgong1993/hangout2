@@ -7,50 +7,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/introHCI.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->    
 </head>
 
 <body>
-	<div class="container">
+	<div id="wrapper">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<button id="menubtn" type="button" class="btn btn-default">MENU</button>
+				<ul>
+				<li><a href="">Your Friends</a></li>
+				<li><a href="">Picture Gallery</a></li>
+				<li><a href="">Group Chats</a></li>
+				<li><a href="">Upcoming Events</a></li>
+				<li><a href="">Plan an Event</a></li>
+				<li><a href="">Browse Activities</a></li>
+				</ul>
+			</div>
+		</div> <!-- end of sidebar wrapper -->
 
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>hangouts R us</h1>
+					<p>nothing to do? we got something for ya</p>
+				</div>
 
-		<button id="menubtn" type="button" class="btn btn-default">MENU</button>
-		<div class="menubar">
-			<ul>
-			  <li><a href="">Your Friends</a></li>
-			  <li><a href="">Picture Gallery</a></li>
-			  <li><a href="">Group Chats</a></li>
-			  <li><a href="">Upcoming Events</a></li>
-			  <li><a href="">Plan an Event</a></li>
-			  <li><a href="">Browse Activities</a></li>
-			</ul>
+				<h3>Your Calendar</h3>
+				<h3>Your Groups</h3>
+				<div>
+					<ul>
+					<li><a href="">Trash Squad</a></li>
+					<li><a href="">Opera Fam</a></li>
+					<li><a href="">Bang Room</a></li>
+					</ul>
+					<button id="nothingToDoBtn" type="button" class="btn btn-default">Nothing to do?</button>
+					<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+				</div>
+			</div>
 		</div>
-
-		<div class="jumbotron">
-			<h1>hangouts R us</h1>
-			<p>nothing to do? we got something for ya</p>
-		</div>
-	
-		<h3>Your Calendar</h3>
-		<h3>Your Groups</h3>
-		<div class="mygroups">
-			<ul>
-			  <li><a href="">Trash Squad</a></li>
-			  <li><a href="">Opera Fam</a></li>
-			  <li><a href="">Bang Room</a></li>
-			</ul>
-		</div>
-
-
-    	<button id="nothingToDoBtn" type="button" class="btn btn-default">Nothing to do?</button>
 	</div>
 
-
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/introHCI.js"> </script>
+	 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
 </body>
 </html>
