@@ -1,20 +1,27 @@
 {
-  "name": "Hangouts R Us",
-  "description": "CSE170 project",
+  "name": "hangoutsrus",
+  "description": "cseproject",
   "version": "0.0.1",
-  "author": "Students of CSE170",
-
-  "repository": {
-  	"type": "git",
-  	"url": "https://github.com/jgong1993/HangoutsRUs"
-  },
+  "author": "cse170",
   "license": "MIT",
-
   "main": "server.js",
   "dependencies": {
     "express": "3.x"
   },
+  "private": true,
   "engines": {
-  	"node": "0.10.x"
-  }
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgong1993/HangoutsRUs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jgong1993/HangoutsRUs/issues"
+  },
+  "homepage": "https://github.com/jgong1993/HangoutsRUs#readme"
 }
