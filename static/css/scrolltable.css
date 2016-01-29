@@ -10,7 +10,8 @@ div.tableContainer {
 /* Reset overflow value to hidden for all non-IE browsers. */
 html>body div.tableContainer {
 	overflow: hidden;
-	width: 900px;
+/*	width: 900px;*/
+	width: 90%;
 	margin: auto;
 }
 
