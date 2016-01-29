@@ -8,6 +8,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/sidebar.css" rel="stylesheet">
+	<link href="css/scrolltable.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->    
 </head>
 
@@ -17,7 +18,7 @@
 		<!-- p means paragraph -->
 		<div id="sidebar-wrapper">	
 			<div class="sidebar-nav">
-				<button id="menubtn" type="button" class="btn btn-default">MENU</button>
+				<button style="width:100%" id="menubtn" type="button" class="btn btn-default">MENU</button>
 				<ul>
 				<li><a href="">Your Friends</a></li>
 				<li><a href="">Picture Gallery</a></li>
@@ -30,6 +31,7 @@
 		</div> <!-- end of sidebar wrapper -->
 
 		<div id="page-content-wrapper">
+			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 			<div class="container-fluid">
 				<div class="jumbotron">
 					<h1>hangouts R us</h1>
@@ -37,6 +39,81 @@
 				</div>
 
 				<h3>Your Calendar</h3>
+				<div id="tableContainer" class="tableContainer">
+					<table border="0" cellpadding="0" cellspacing="0" width="15%" class="noScrollTable pure-table">
+							<tr> </tr>
+							<tr> <td>Monday</td> </tr>
+							<tr> <td>Tuesday</td> </tr>
+							<tr> <td>Wednesday</td> </tr>
+							<tr> <td>Thursday</td> </tr>
+							<tr> <td>Friday</td> </tr>
+							<tr> <td>Saturday</td> </tr>
+							<tr> <td>Sunday</td> </tr>
+					</table>
+
+				 	<table border="0" cellpadding="0" cellspacing="0" width="85%" class="scrollTable pure-table">
+					    <tbody class="scrollContent">
+					    	<tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					    	<tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					      <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					       <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					       <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					      <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					      <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					      <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+					      <tr>
+						        <td>Cell Content 1</td>
+						        <td>Cell Content 2</td>
+						        <td>Cell Content 3</td>
+					      </tr>
+
+					    </tbody>
+					</table> 
+				</div>
 				<h3>Your Groups</h3>
 				<div>
 					<ul>
@@ -45,7 +122,7 @@
 					<li><a href="">Bang Room</a></li>
 					</ul>
 					<button id="nothingToDoBtn" type="button" class="btn btn-default">Nothing to do?</button>
-					<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+					
 				</div>
 			</div>
 		</div>
