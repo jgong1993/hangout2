@@ -1,0 +1,7 @@
+.jumbotron {
+     background: url("../images/lorempixel.jumbotron.jpeg");
+}
+
+.jumbotron h1, p {
+	text-align: right;
+}
