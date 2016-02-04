@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>hangouts R us - Group Chat</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- this is a comment in HTML -->    
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="friends.html">Your Friends</a></li>
+				<li><a href="gallery.html">Picture Gallery</a></li>
+				<li><a href="groupchat.html">Group Chats</a></li>
+				<li><a href="upcomingEvents.html">Upcoming Events</a></li>
+				<li><a href="planEvent.html">Plan an Event</a></li>
+				<li><a href="browseActivities.html">Browse Activities</a></li>
+				</ul>
+			</div>
+		</div> <!-- end of sidebar wrapper -->
+
+		<div id="page-content-wrapper">
+			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
+			</a>
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>hangouts R us</h1>
+					<p>Group Chat</p>
+				</div>
+				<h2> People to chat with </h2>
+
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    Steve
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    Kevin
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+</body>
+</html>
