@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Hangouts R Us</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/side-menu.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <h1>Hangouts R Us</h1>
+            <h2>You have no idea what to do!</h2>
+        </div>
+
+		<style scoped>
+	        .button-xsmall {font-size: 70%;}
+	        .button-small {font-size: 85%;}
+	    </style>
+
+        <div style="padding: 20px 0px 0px 300px"class="content">
+			    <div style='float:left'>
+					<h2> Login </h2>
+			        <form action = "/menu" class="pure-form pure-form-stacked">
+					    <fieldset>
+					        <label for="email">Email</label>
+					        <input required="" id="email" type="email" placeholder="Email">
+
+					        <label for="password">Password</label>
+					        <input required="" id="password" type="password" placeholder="Password">
+
+					        <label for="remember" class="pure-checkbox">
+					        <input id="remember" type="checkbox"> Remember me
+					        </label>
+
+					        <button type="submit" class="pure-button pure-button-primary">Login</button></br></br>
+					    </fieldset>
+					</form>
+				</div>
+
+				<div style="padding: 0px 0px 0px 350px">
+					<h2> Sign Up </h2>
+			        <form method="post" action ="/addPerson" class="pure-form pure-form-stacked">
+					    <fieldset>
+					    	<div>
+						        <label for="email">Email</label>
+						        <input required="" name ="emailSign" id="emailSign" type="email" placeholder="Email">
+
+						        <label for="password">Password</label>
+						        <input required="" name = "passwordSign" id="passwordSign" type="password" placeholder="Password">
+
+						        <label for="password">Password (again) </label>
+						        <input required="" name = "passwordSign2" id="password2Sign" type="password" placeholder="Password">
+					        </div>
+					        <div style="padding-top:5px">
+					       	 	<button type="submit" class="pure-button pure-button-primary">Sign up</button>
+					    	</div>
+					    </fieldset>
+					</form>
+				</div>
+				<a href="homepage.html"> <h1> TEMPORARY LOGIN BUTTON CLICK HERE </h1></a>
+        </div> <!-- End of Content -->
+    </div> <!-- End of Main -->
+</body>
+</html>
+
