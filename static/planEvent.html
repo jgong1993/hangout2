@@ -28,6 +28,8 @@
 				<li><a href="browseActivities.html">Browse Activities</a></li>
 				</ul>
 			</div>
+			<a href="index.html"> <button id="logoutButton" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true">
+			</span> Log Out</button></a>
 		</div> <!-- end of sidebar wrapper -->
 
 		<div id="page-content-wrapper">
@@ -64,6 +66,11 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.js"></script>
 	<script>
+		function hideDiv(){
+		 	$("#wrapper").toggleClass("toggled");
+		 }
+		 window.onload = hideDiv; 
+		 
 	    $("#menu-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
