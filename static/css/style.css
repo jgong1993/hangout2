@@ -14,3 +14,29 @@
 	width: 100%;
 
 }
+
+.noob p{
+	text-align: left;	
+	color: black;
+}
+
+.noob2 p{
+	text-align: right;	
+	color: black;
+}
+
+.noob a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+.noob2 a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.groupDescrip{
+	text-align: left;
+}
+
+.noob button{
+	height: 2.15em;
+	width: 100%;
+}
