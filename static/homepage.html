@@ -22,15 +22,24 @@
 			<div class="sidebar-nav">
 				<li><a>Welcome, [you]!</a></li><hr>
 				<li><a href="homepage.html">Home</a></li><hr>
+
 				<li><a href="friends.html">Your Friends</a></li>
 				<li><a href="gallery.html">Your Photos</a></li><hr>
 				<li><a href="viewGroups.html">Your Groups</a></li>
 				<li><a href="groupchat.html">Group Chats</a></li><hr>
 				<li><a href="upcomingEvents.html">Upcoming Events</a></li>
-				<li><a href="browseActivities.html">Browse Activities</a></li>
+				<li><a href="browseActivities.html">Browse Activities</a></li><hr>
+				<a href="#menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+					</span> Back</button></a>
+				<a href="index.html"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
+					</span> Log Out</button></a>
+				
+
+				
+
+				<!-- <li><a id="backButton" href="#menu2-toggle" class="btn btn-default"> Back </a></li><hr> -->
 			</div>
-			<a href="index.html"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
-			</span> Log Out</button></a>
+			
 
 		</div> <!-- end of sidebar wrapper -->
 
@@ -174,14 +183,17 @@
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
-		 function hideDiv(){
-		 	$("#wrapper").toggleClass("toggled");
-		 }
-		 window.onload = hideDiv; 
-
+		$(document).ready(function() {
+				 $("#wrapper").toggleClass("toggled");
+		});
 	    $("#menu-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
+	    });
+	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        console.log("wat");
+	        $("#wrapper2").toggleClass("toggled");
 	    });
     </script>
 </body>

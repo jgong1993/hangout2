@@ -11,14 +11,15 @@
 }
 
 #sidebar-wrapper {
-    /*border: 2px solid #FFF;*/
+    border: 1px solid #000;
     z-index: 1000;
     position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     background: #2F383D;
     /*background: #000;*/
     -webkit-transition: all 0.5s ease;
@@ -28,7 +29,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
 }
 
 #page-content-wrapper {
@@ -47,7 +48,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -55,7 +56,7 @@
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 35px;
 }
 
 .sidebar-nav li a{
@@ -90,7 +91,27 @@
     background: none;
 }
 
-@media(min-width:768px) {
+#logoutButton {
+    border: 1px solid black;
+    bottom: 0;
+    width: 100%;
+}
+
+#logoutButton:hover{
+    background-color: #AA2C29;
+}
+
+#backButton {
+     border: 1px solid black;
+    width: 100%;
+    color: black;
+}
+#backButton:hover{
+    background-color: #253C72;
+}
+
+
+@media(min-width:767px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -100,9 +121,47 @@
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media(min-width:375px) and (max-width:400px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+    }
+
+    #backButton {
+        width: 375px;
+    }
+    #logoutButton {
+        width: 375px;
+    }
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }

@@ -75,10 +75,9 @@
 	<script src="js/jquery.js"></script>
 	<script src="fotorama/fotorama.js"></script>
 	<script>
-		function hideDiv(){
-		 	$("#wrapper").toggleClass("toggled");
-		 }
-		 window.onload = hideDiv; 
+		$(document).ready(function() {
+				 $("#wrapper").toggleClass("toggled");
+		});
 		 
 	    $("#menu-toggle").click(function(e) {
 	        e.preventDefault();
