@@ -2,14 +2,13 @@
 
 <html>
 <head>
-	<title>hangouts R us - Your Photos</title>	
+	<title>hangouts R us - Your Groups</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/sidebar.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	<link href="fotorama/fotorama.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
@@ -20,13 +19,13 @@
 		<div id="sidebar-wrapper">	
 			<div class="sidebar-nav">
 				<ul>
-				<li><a>Welcome, [you]!</a></li><hr>
 				<li><a href="homepage.html">Home</a></li>
 				<li><a href="friends.html">Your Friends</a></li>
-				<li><a href="gallery.html">Your Photos</a></li>
-				<li><a href="viewGroups.html">Your Groups</a></li>
+				<li><a href="gallery.html">Picture Gallery</a></li>
+				<li><a href="viewGroups.html">View Groups</a></li>
 				<li><a href="groupchat.html">Group Chats</a></li>
 				<li><a href="upcomingEvents.html">Upcoming Events</a></li>
+				<li><a href="planEvent.html">Plan an Event</a></li>
 				<li><a href="browseActivities.html">Browse Activities</a></li>
 				</ul>
 			</div>
@@ -40,40 +39,25 @@
 			</a>
 			<div class="container-fluid">
 				<div class="jumbotron">
-					<h1>Your Photos</h1>
-					<p>What You've Uploaded</p>
+					<h1>Your Groups</h1>
 				</div>
-				<hr>
 				<div>
-					<h3>02.03.2016 w/ Opera Fam</h3>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					</div>			
-				</div>
-				<hr>
-				<div>
-					<h3>01.30.2016 w/ Amanda's Room</h3>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					</div>				
-				</div>
-				<hr>
-				<div>
-					<h3>11.29.2015 w/ Trash Squad</h3>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					</div>				
+
+					<a href="makeGroup.html" style="margin:20px;" class="btn btn-default">Make a New Group</a>
+
+					<ul>
+					<li><a href="indivGroup.html">Trash Squad</a></li>
+					<li><a href="indivGroup.html">Opera Fam</a></li>
+					<li><a href="indivGroup.html">Amanda's Room</a></li>
+					</ul>					
 				</div>
 			</div>
 		</div>
 	</div>
+
 	 
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.js"></script>
-	<script src="fotorama/fotorama.js"></script>
 	<script>
 		function hideDiv(){
 		 	$("#wrapper").toggleClass("toggled");
