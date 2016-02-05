@@ -10,15 +10,6 @@ body {background-color: #FFF;}
 .rightMarg { margin-top: -7px; }
 .groupDescrip{text-align: left;}
 
-#logoutButton {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-#logoutButton:hover{
-	background-color: #AA2C29;
-}
 
 .noob p{
 	text-align: left;	
