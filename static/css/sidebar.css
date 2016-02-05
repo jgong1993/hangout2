@@ -11,7 +11,7 @@
 }
 
 #sidebar-wrapper {
-    border: 2px solid #FFF;
+    /*border: 2px solid #FFF;*/
     z-index: 1000;
     position: fixed;
     left: 250px;
@@ -19,7 +19,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #2F383D;
     /*background: #000;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -58,10 +58,10 @@
     line-height: 40px;
 }
 
-.sidebar-nav li a {
+.sidebar-nav li a{
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #FFF;
 }
 
 .sidebar-nav li a:hover {

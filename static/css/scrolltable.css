@@ -29,7 +29,7 @@ html>body div.tableContainer table {
 
 th, td {
 	min-width: 150px;
-	height: 45px;
+	height: 40px;
 }
 
 
@@ -72,6 +72,8 @@ html>body tbody.scrollContent {
 	height: 100%;
 	overflow: auto;
 	padding-left: 5px;
+	overflow-y: hidden;
+	
 }
 
 html>body tbody.activeThing {
