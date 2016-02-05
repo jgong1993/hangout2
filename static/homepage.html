@@ -29,7 +29,7 @@
 				<li><a href="groupchat.html">Group Chats</a></li><hr>
 				<li><a href="upcomingEvents.html">Upcoming Events</a></li>
 				<li><a href="browseActivities.html">Browse Activities</a></li><hr>
-				<a href="#menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+				<a href="#menu-toggle" id="menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
 					</span> Back</button></a>
 				<a href="index.html"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
 					</span> Log Out</button></a>
@@ -188,8 +188,7 @@
 	    });
 	    $("#menu2-toggle").click(function(e) {
 	        e.preventDefault();
-	        console.log("wat");
-	        $("#wrapper2").toggleClass("toggled");
+	        $("#wrapper").toggleClass("toggled");
 	    });
     </script>
 </body>
