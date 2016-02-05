@@ -9,6 +9,7 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/sidebar.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="fotorama/fotorama.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
@@ -43,41 +44,37 @@
 					<h1>hangouts R us</h1>
 					<p>Picture Gallery</p>
 				</div>
-				
+				<hr>
 				<div>
 					<h3>01.29.2016</h3>
-					<table width="100%">
-						<tr>
-							<td> <img src="images/lorempixel.abstract.1.jpeg" class="img-rounded"></td>
-							<td> With the trash squad</td>
-						</tr>
-					</table>				
+					<div class="fotorama">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					</div>			
 				</div>
+				<hr>
 				<div>
 					<h3>01.30.2016</h3>
-					<table width="100%">
-						<tr>
-							<td> <img src="images/lorempixel.abstract.1.jpeg" class="img-rounded"></td>
-							<td> With the cheese</td>
-						</tr>
-					</table>				
+					<div class="fotorama">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					</div>				
 				</div>
+				<hr>
 				<div>
 					<h3>01.31.2016</h3>
-					<table width="100%">
-						<tr>
-							<td> <img src="images/lorempixel.abstract.1.jpeg" class="img-rounded"></td>
-							<td> With the cheese</td>
-						</tr>
-					</table>				
+					<div class="fotorama">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					  <img src="images/lorempixel.jumbotron.jpeg">
+					</div>				
 				</div>
 			</div>
 		</div>
 	</div>
-
 	 
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.js"></script>
+	<script src="fotorama/fotorama.js"></script>
 	<script>
 		function hideDiv(){
 		 	$("#wrapper").toggleClass("toggled");

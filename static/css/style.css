@@ -40,3 +40,35 @@
 	height: 2.15em;
 	width: 100%;
 }
+
+.groupDiv {
+	/*background: url("../images/lorempixel.jumbotron.jpeg");*/
+}
+.hoverBlue:hover {
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: blue;
+    text-align:center;
+    color:white;
+}
+.hoverBlack:hover {
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: black;
+    text-align:center;
+    color:white;
+}
+.hoverGreen:hover {
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: green;
+    text-align:center;
+    color:white;
+}
+
+
+
+
