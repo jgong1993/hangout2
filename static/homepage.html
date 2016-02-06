@@ -52,18 +52,19 @@
 						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 							    Toggle Menu
 							</a></td>
-						<td> <a ><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						<td> <a href="#showCalendar" id="showCalendar"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 							    Show Calendar
 							</a></td>
-						<td> <a ><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						<td> <a href="#showGroups" id="showGroups"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 							    Show Groups
 							</a></td>
 						</tr>
 					</table>
 				</div>
 				
-				<h3>Your Calendar</h3>
+				
 				<div id="tableContainer" class="tableContainer">
+					<h3>Your Calendar</h3>
 					<table border="0" cellpadding="0" cellspacing="0" width="15%" class="noScrollTable ">
 							<tr><td></td></tr>
 							<tr> <td>Monday</td> </tr>
@@ -139,7 +140,7 @@
 				<!-- END OF CALANDER -->
 
 				<!-- BEGIN OF GROUPS DIV -->
-				<div class="groupDiv">
+				<div id="groupDiv" class="groupDiv">
 					<h3>Your Groups</h3><br>
 					<div class="row">
 					  <div class="noob col-xs-6 col-md-4">
@@ -195,6 +196,14 @@
 		$(document).ready(function() {
 				 $("#wrapper").toggleClass("toggled");
 		});
+		$("#showCalendar").click(function(e) {
+	        e.preventDefault();
+	        $("#tableContainer").toggle();
+	    });
+	    $("#showGroups").click(function(e) {
+	        e.preventDefault();
+	        $("#groupDiv").toggle();
+	    });
 	    $("#menu-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");

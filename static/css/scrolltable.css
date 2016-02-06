@@ -2,7 +2,7 @@
 div.tableContainer {
 	clear: both;
 	border: 1px solid none;
-	height: 320px;
+	height: 330px;
 	overflow: auto;
 	width: 900px;
 }
@@ -12,7 +12,7 @@ html>body div.tableContainer {
 	overflow: hidden;
 /*	width: 900px;*/
 	width: 90%;
-	margin: auto;
+	/*margin: auto;*/
 }
 
 /* define width of table. IE browsers only                 */
@@ -29,7 +29,7 @@ html>body div.tableContainer table {
 
 th, td {
 	min-width: 150px;
-	height: 40px;
+	height: 35px;
 }
 
 
