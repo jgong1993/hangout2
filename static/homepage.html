@@ -41,14 +41,27 @@
 
 		<div id="page-content-wrapper">
 			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
-			</a>
+				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu </a>
 			<div class="container-fluid">
 				<div class="jumbotron">
 					<h1>hangouts R us</h1>
 					<p>nothing to do? we got something for ya</p>
 				</div>
-				<hr>
+				<div class="miniNavBar">
+					<table class="miniNavTable"> 
+						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+							    Toggle Menu
+							</a></td>
+						<td> <a ><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+							    Show Calendar
+							</a></td>
+						<td> <a ><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							    Show Groups
+							</a></td>
+						</tr>
+					</table>
+				</div>
+				
 				<h3>Your Calendar</h3>
 				<div id="tableContainer" class="tableContainer">
 					<table border="0" cellpadding="0" cellspacing="0" width="15%" class="noScrollTable ">
@@ -187,6 +200,10 @@
 	        $("#wrapper").toggleClass("toggled");
 	    });
 	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+	     $("#menu3-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
 	    });

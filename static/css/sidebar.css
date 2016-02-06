@@ -11,14 +11,14 @@
 }
 
 #sidebar-wrapper {
-    border: 1px solid #000;
+    border-radius: 5px;
+    border: 2px solid #000;
     z-index: 1000;
     position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: hidden;
     overflow-x: hidden;
     background: #2F383D;
     /*background: #000;*/
