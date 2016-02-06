@@ -20,12 +20,26 @@
     height: 100%;
     margin-left: -250px;
     overflow-x: hidden;
+    overflow-y: hidden;
     background: #2F383D;
     /*background: #000;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.sidebar-nav img{
+    margin-top: 10px;
+    padding-left: -25px;
+    height: 140px;
+    width: 145px;
+    margin-left: 0px;
+}
+
+#sidebarName{
+    text-align: center;
+    margin-left: -15px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -110,9 +124,18 @@
     background-color: #253C72;
 }
 
+/*@media (only screen)
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
 
-@media(min-width:767px) {
-    #wrapper {
+}*/
+
+
+/*  iPhone 5 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+     #wrapper {
         padding-left: 250px;
     }
 
@@ -121,9 +144,25 @@
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: 320px;
+        height: 100%;
     }
 
+    .sidebar-nav {
+        width: 100%;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
+    }
+
+    #backButton {
+        width: 320px;
+    }
+    #logoutButton {
+        width: 320px;
+    }
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
@@ -139,10 +178,9 @@
     }
 }
 
-
-
-@media(min-width:300px) and (max-width:766px) {
-    #wrapper {
+/*  iPhone 6 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+     #wrapper {
         padding-left: 250px;
     }
 
@@ -151,11 +189,17 @@
     }
 
     #sidebar-wrapper {
-        width: 100%;
+        width: 375px;
+        height: 667px;
     }
 
     .sidebar-nav {
         width: 100%;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
     }
 
     #backButton {
@@ -178,3 +222,206 @@
         margin-right: 0;
     }
 }
+
+/*  iPhone 6+ */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
+  #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 414px;
+        height: 736px;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
+    }
+
+    #backButton {
+        width: 414px;
+    }
+    #logoutButton {
+        width: 414px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+
+}
+
+/*  Nexus 6+ */
+@media only screen and (min-device-width: 412px) and (max-device-width: 659px) and (-webkit-min-device-pixel-ratio: 3.5) and (orientation: portrait){
+  #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 412px;
+        height: 659px;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
+    }
+
+    #backButton {
+        width: 412px;
+    }
+    #logoutButton {
+        width: 412px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+
+}
+
+/* laptop screen */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    .sidebar-nav {
+        width: 250px;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
+    }
+
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/* smaller laptop screen */
+@media screen and (min-width:415px) and (max-width:600px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+    }
+
+    #profileName {
+        text-align: center;
+        margin-left: -20px;
+    }
+
+    #backButton {
+        width: 415px;
+    }
+    #logoutButton {
+        width: 415px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/*@media(min-width:767px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}*/

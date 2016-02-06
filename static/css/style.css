@@ -2,10 +2,14 @@ body {background-color: #FFF;}
 .jumbotron {
 	background: url("../images/banner.jpg");
 	background-size: 100%;
-
 }
 .jumbotron h1, p {
 	text-align: right;
+	color: #10110E;
+}
+
+hr{
+	margin-top: 0.2em;
 }
 .rightMarg { margin-top: -7px; }
 .groupDescrip{text-align: left;}
@@ -62,10 +66,11 @@ body {background-color: #FFF;}
 .miniNavBar a, a:link, a:visited, a:active{
 	text-decoration: none;
 	color: black;
+	outline: 0;
 }
 
 .miniNavBar a:hover{
-	border-bottom: 1px solid #000;
+	border-bottom: 3px solid #000;
 	padding-bottom: 5px;
 
 }

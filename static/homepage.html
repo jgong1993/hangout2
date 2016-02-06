@@ -20,9 +20,12 @@
 		<!-- p means paragraph -->
 		<div id="sidebar-wrapper">	
 			<div class="sidebar-nav">
-				<li><a>Welcome, [you]!</a></li><hr>
+				<li><div id="profileName">
+						<img align="middle" class="img-rounded" src="images/icson.jpg" onError="this.src='images/placeholder.png';"> </img>
+					</div>
+					<a id="sidebarName"> Cheese Corn</a>
+				</li><hr>
 				<li><a href="homepage.html">Home</a></li><hr>
-
 				<li><a href="friends.html">Your Friends</a></li>
 				<li><a href="gallery.html">Your Photos</a></li><hr>
 				<li><a href="viewGroups.html">Your Groups</a></li>
@@ -33,7 +36,6 @@
 					</span> Back</button></a>
 				<a href="index.html"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
 					</span> Log Out</button></a>
-			
 			</div>
 			
 
@@ -49,7 +51,7 @@
 				</div>
 				<div class="miniNavBar">
 					<table class="miniNavTable"> 
-						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 							    Toggle Menu
 							</a></td>
 						<td> <a href="#showCalendar" id="showCalendar"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
@@ -61,6 +63,7 @@
 						</tr>
 					</table>
 				</div>
+				<hr>
 				
 				
 				<div id="tableContainer" class="tableContainer">
@@ -135,8 +138,8 @@
 					      </tr>
 					    </tbody>
 					</table> 
+					<hr>
 				</div>
-				<hr>
 				<!-- END OF CALANDER -->
 
 				<!-- BEGIN OF GROUPS DIV -->
