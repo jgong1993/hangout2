@@ -10,7 +10,15 @@
 	<link href="css/sidebar.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/photogallery.css" rel="stylesheet">
-	<link href="fotorama/fotorama.css" rel="stylesheet">
+	<!-- <link href="fotorama/fotorama.css" rel="stylesheet"> -->
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+	<style type="text/css">
+	    a.fancybox img {
+	        border: none;
+	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+	    } 
+	</style>
 
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
@@ -55,9 +63,6 @@
 						 <td> <a href="#" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 							    Create Album
 							</a></td>
-						<!-- <td> <a href="#showGroups" id="showGroups"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-							    Show Groups
-							</a></td> -->
 						</tr>
 					</table>
 				</div>
@@ -70,13 +75,21 @@
 							<td style="padding-top: 15px;"><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
 						</tr>
 					</table>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
+					<div class="galleryscroll">
+						<div class="innergalleryscroll">
+						  <img class="fancybox imageThumbnail" src="images/lorempixel.jumbotron.jpeg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						</div>
 					</div>	
-					
+					<hr>
 				</div>
-				<hr>
+				
 				<div class="miniNavBarForGallery">
 					<table>
 						<tr>
@@ -84,12 +97,20 @@
 							<td style="padding-top: 15px;"><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
 						</tr>
 					</table>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					</div>				
+					<div class="galleryscroll">
+						<div class="innergalleryscroll">
+						  <img class="fancybox imageThumbnail" src="images/lorempixel.jumbotron.jpeg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						</div>
+					</div>		
+					<hr>		
 				</div>
-				<hr>
 				<div class="miniNavBarForGallery">
 					<table>
 						<tr>
@@ -97,23 +118,60 @@
 							<td style="padding-top: 15px;"><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
 						</tr>
 					</table>
-					<div class="fotorama">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					  <img src="images/lorempixel.jumbotron.jpeg">
-					</div>				
+					<div class="galleryscroll">
+						<div class="innergalleryscroll">
+						  <img class="fancybox imageThumbnail" src="images/lorempixel.jumbotron.jpeg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						  <img class="fancybox imageThumbnail" src="images/icon.jpg">
+						</div>
+					</div>		
+					<hr>			
 				</div>
 			</div>
 		</div>
 	</div>
 	 
+	<script src="js/jquery.js"></script> 
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.js"></script>
 	<script src="fotorama/fotorama.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+	<!-- Script for the image gallery -->
+	<script type="text/javascript"> 
+	    $(function($){
+	        var addToAll = true;
+	        var gallery = true;
+	        var titlePosition = 'inside';
+	        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+	            var $this = $(this);
+	            var title = $this.attr('title');
+	            var src = $this.attr('data-big') || $this.attr('src');
+	            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+	            $this.wrap(a);
+	        });
+	        if (gallery)
+	            $('a.fancybox').attr('rel', 'fancyboxgallery');
+	        $('a.fancybox').fancybox({
+	            titlePosition: titlePosition
+	        });
+	    });
+	    $.noConflict();
+	</script>
+
+	<!-- Script for the mini nav bar -->
 	<script>
 		$(document).ready(function() {
-				 $("#wrapper").toggleClass("toggled");
+			//var container_width = 50 * $(".innergalleryscroll img").length;
+			//console.log(container_width);
+		   	//$(".innergalleryscroll").css("width", container_width);
+			$("#wrapper").toggleClass("toggled");
 		});
-		 
 	    $("#menu2-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
@@ -123,5 +181,6 @@
 	        $("#wrapper").toggleClass("toggled");
 	    });
     </script>
+
 </body>
 </html>
