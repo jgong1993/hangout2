@@ -28,6 +28,7 @@ hr{
 .groupRows2 p{
 	text-align: right;	
 	color: black;
+	word-wrap: break-word;
 }
 
 .tableContainer p{

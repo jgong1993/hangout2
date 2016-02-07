@@ -27,12 +27,16 @@ html>body div.tableContainer table {
 	/* width: 756px */
 }
 
-th, td {
+
+.noScrollTable th, td {
 	min-width: 150px;
 	height: 35px;
 }
 
-
+.scrollTable th, td{
+	min-width: 150px;
+	height: 35px;
+}
 /* set table header to a fixed position. WinIE 6.x only                                       */
 /* In WinIE 6.x, any element with a position property set to relative and is a child of       */
 /* an element that has an overflow property set, the relative value translates into fixed.    */
@@ -58,6 +62,7 @@ thead.fixedHeader tr {
 	position: absolute;
 	width: 15%
 }*/
+
 .noScrollTable {
 	padding-top: -25px;
 	padding-bottom: -25px;
