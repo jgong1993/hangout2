@@ -70,13 +70,15 @@ hr{
 	border-bottom: 3px solid #000;
 	padding-bottom: 5px;
 }
-/*  iPhone 6 */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
-   .miniNavBar, .miniNavTable{
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 420px){}
+   .miniNavBar {
+   	    width: 100%;    
+   }
+   .miniNavTable{
    		overflow-x: scroll;
    		display: inline-block;
-        width: 325px;
-        max-width: 375px;
+        width: 100%;
    }
 }
 .imagetitlebar{
