@@ -10,6 +10,8 @@
 	<link href="css/sidebar.css" rel="stylesheet">
 	<link href="css/scrolltable.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
@@ -63,8 +65,10 @@
 				</div>
 				<hr>
 				
+				<div id='calendar'>
+				</div>
 				
-				<div id="tableContainer" class="tableContainer">
+			<!-- 	<div id="tableContainer" class="tableContainer">
 					<h3>Your Calendar</h3>
 					<table border="0" cellpadding="0" cellspacing="0" width="15%" class="noScrollTable ">
 							<tr><td></td></tr>
@@ -137,7 +141,7 @@
 					    </tbody>
 					</table> 
 					<hr>
-				</div>
+				</div> -->
 				<!-- END OF CALANDER -->
 
 				<!-- BEGIN OF GROUPS DIV -->
@@ -193,13 +197,27 @@
 
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src='fullcalendar/lib/moment.min.js'></script>
+	<script src='fullcalendar/fullcalendar.js'></script>
 	<script>
 		$(document).ready(function() {
 			$("#wrapper").toggleClass("toggled");
+
+			$('#calendar').fullCalendar({
+        		// put your options and callbacks here
+        		header: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
+				defaultDate: '2016-02-09',
+				defaultView: 'agendaDay',
+				contentHeight: 400
+    		});
 		});
 		$("#showCalendar").click(function(e) {
 	        e.preventDefault();
-	        $("#tableContainer").toggle();
+	        $("#calendar").toggle();
 	    });
 	    $("#showGroups").click(function(e) {
 	        e.preventDefault();
