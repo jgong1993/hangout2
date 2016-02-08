@@ -218,8 +218,9 @@
     }
 }
 
+/*start here =-=======-=======-=======-=======-=======-=======-=======-======-=======-=======-=======-=======-=======-=======-=======-======-=======-=======-=======-=======-=======-=======-=======-=====*/
 /*  iPhone 6 */
-/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
      #wrapper {
         padding-left: 250px;
     }
@@ -261,10 +262,10 @@
         position: relative;
         margin-right: 0;
     }
-}*/
+}
 
 /*  iPhone 6+ */
-/*@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
   #wrapper {
         padding-left: 250px;
     }
@@ -307,10 +308,10 @@
         margin-right: 0;
     }
 
-}*/
+}
 
 /*  note 4 */
-/*@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait){
      #wrapper {
         padding-left: 250px;
     }
@@ -352,10 +353,10 @@
         position: relative;
         margin-right: 0;
     }
-}*/
+}
 
 /*  Nexus 6+ */
-/*@media only screen and (min-device-width: 412px) and (max-device-width: 659px) and (-webkit-min-device-pixel-ratio: 3.5) and (orientation: portrait){
+@media only screen and (min-device-width: 412px) and (max-device-width: 659px) and (-webkit-min-device-pixel-ratio: 3.5) and (orientation: portrait){
   #wrapper {
         padding-left: 250px;
     }
@@ -398,8 +399,10 @@
         margin-right: 0;
     }
 }
-*/
 
+
+
+/* end here  =-=======-=======-=======-=======-=======-=======-=======-=======-======-=======-=======-=======-=======-=======-=======-=======-======*/
 
 /* laptop screen */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
