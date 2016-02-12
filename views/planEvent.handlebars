@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>hangouts R us - Upcoming Events</title>	
+	<title>hangouts R us - Plan an Event</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,26 +39,25 @@
 			</a>
 			<div class="container-fluid">
 				<div class="jumbotron">
-					<h1>Upcoming Events</h1>
+					<h1>Plan an Event</h1>
 				</div>
-				<a href="/planEvent" style="margin:20px;" class="btn btn-default">Plan a New Event!</a>
-
-				{{#each events}}
-					<div>
-						<h2>{{title}}</h2>
-					
-						<h4>{{when}}</h4>
-						<hr>
-						<h3>{{whoisgoing}}</h3>
-					</div>
-				{{/each}}
-
-
-
-
-
-
 				
+				<form id="planEventForm" role="form" method="get" action="/planEventResult">
+				<h3>Suggest an event below</h3>
+			    <div class="form-group">
+			      <label for="title">What do you wanna do:</label>
+			      <input type="text" class="form-control" id="title" placeholder="Example: go on a shopping spree" name="title">
+			    </div>
+			    <div class="form-group">
+			      <label for="selectsquad">Choose your group:</label>
+			      <input type="text" class="form-control" id="selectsquad" placeholder="Example: Trash Squad" name="group">
+			    </div>
+			    <div class="form-group">
+			      <label for="plandate">When do you want to do it:</label>
+			      <input type="text" class="form-control" id="plandate" placeholder="Example: February 29" name="when">
+			    </div>
+			    <input type="submit" id="submitBtn" class="btn btn-default" value="Suggest this event!"></input>
+			</form>
 
 			</div>
 		</div>

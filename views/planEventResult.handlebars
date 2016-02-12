@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>hangouts R us - Upcoming Events</title>	
+	<title>hangouts R us - Plan an Event</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 					<li><a href="gallery.html">Your Photos</a></li>
 					<li><a href="viewGroups.html">Your Groups</a></li>
 					<li><a href="groupchat.html">Group Chats</a></li>
-					<li><a href="/upcomingEvents">Upcoming Events</a></li>
+					<li><a href="upcomingEvents.html">Upcoming Events</a></li>
 					<li><a href="browseActivities.html">Browse Activities</a></li>
 				</ul>
 			</div>
@@ -39,27 +39,24 @@
 			</a>
 			<div class="container-fluid">
 				<div class="jumbotron">
-					<h1>Upcoming Events</h1>
+					<h1>Nicely done!</h1>
 				</div>
-				<a href="/planEvent" style="margin:20px;" class="btn btn-default">Plan a New Event!</a>
-
-				{{#each events}}
+				<h1>Congrats! New Event is planned and your squad can now vote!</h1>
+				<h3>What do you want to do now?</h3>
+				<h4>To go the main page click <a href="/" class="btn btn-info" role="button">here</a></h4>
+				<h4>To see upcoming events click <a href="/upcomingEvents" class="btn btn-info" role="button">here</a></h4>
+				<br>
+				<h1>By the way, Here is the list of all suggested events</h1>
+				{{#each suggested_events}}
 					<div>
 						<h2>{{title}}</h2>
-					
+						<h3>{{group}}</h3>
 						<h4>{{when}}</h4>
+						
+						
 						<hr>
-						<h3>{{whoisgoing}}</h3>
 					</div>
 				{{/each}}
-
-
-
-
-
-
-				
-
 			</div>
 		</div>
 	</div>

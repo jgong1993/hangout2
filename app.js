@@ -20,6 +20,11 @@ var indivGroup = require('./routes/indivGroup');
 var index = require('./routes/index')
 var upcomingEvents = require('./routes/upcomingEvents');
 
+var events = require('./routes/events');
+var indivEvent = require('./routes/indivEvent');
+var planEvent = require('./routes/planEvent');
+var planEventResult = require('./routes/planEventResult');
+
 var app = express();
 
 // all environments
@@ -55,7 +60,11 @@ app.get('/gallery', gallery.viewGallery);
 app.get('/group/:name', indivGroup.thisGroup);
 app.get('/groupchat', groupchat.viewGroupChat);
 app.get('/viewGroups', groups.viewGroups);
-app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
+//app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
+app.get('/upcomingEvents', events.viewEvents);
+app.get('/event/:name', indivEvent.thisEvent);
+app.get('/planEvent', planEvent.planEventView);
+app.get('/planEventResult', planEventResult.addNewEvent);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
