@@ -1,0 +1,58 @@
+{
+	"profile": [
+		{
+			"date": "02.03.2016",
+			"group": "Opera Fam",
+			"imageURL": [
+				{"image":"images/lorempixel.jumbotron.jpeg"},
+				{"image":"images/icon.jpg"},
+				{"image":"https://giant.gfycat.com/BruisedHarshCapybara.gif"},
+				{"image":"http://thedoghousediaries.com/logos/spaceman.png"}, 
+				{"image":"http://thedoghousediaries.com/logos/patreon.png"}
+				]
+		},
+		{
+			"date": "02.04.2016",
+			"group": "Amanda's Room",
+			"imageURL": [
+				{"image":"https://i.imgur.com/hjmo8uU.jpg"},
+				{"image":"images/icon.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/spaceman.png"}, 
+				{"image":"http://thedoghousediaries.com/logos/patreon.png"}
+				]
+		},
+		{
+			"date": "02.05.2016",
+			"group": "Trash Squad",
+			"imageURL": [
+				{"image":"http://i.imgur.com/yB7BG8S.jpg"},
+				{"image":"images/icon.jpg"},
+				{"image":"https://i.imgur.com/Yvq8eXZ.jpg"}, 
+				{"image":"https://i.imgur.com/hjmo8uU.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/patreon.png"}
+				]
+		},
+		{
+			"date": "02.06.2016",
+			"group": "CSE 170",
+			"imageURL": [
+				{"image":"images/icon.jpg"},
+				{"image":"https://i.imgur.com/Yvq8eXZ.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/spaceman.png"}, 
+				{"image":"https://i.imgur.com/hjmo8uU.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/patreon.png"}
+				]
+		},
+		{
+			"date": "02.07.2016",
+			"group": "Peanuts",
+			"imageURL": [
+				{"image":"https://i.imgur.com/Yvq8eXZ.jpg"},
+				{"image":"images/icon.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/spaceman.png"}, 
+				{"image":"https://i.imgur.com/hjmo8uU.jpg"},
+				{"image":"http://thedoghousediaries.com/logos/patreon.png"}
+				]
+		}
+	]
+}

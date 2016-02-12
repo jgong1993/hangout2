@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+	<title>hangouts R us</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+ 	<link href="css/style.css" rel="stylesheet">
+ 	<link href="css/photogallery.css" rel="stylesheet">
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+	<style type="text/css">
+	    a.fancybox img {
+	        border: none;
+	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+	    } 
+	</style>
+	<!-- this is a comment in HTML -->    
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<li><div id="profileName">
+						<img align="middle" class="img-rounded" src="images/icson.jpg" onError="this.src='images/placeholder.png';"> </img>
+					</div>
+					<a id="sidebarName"> Cheese Corn</a>
+				</li><hr>
+				<li><a href="/">Home</a></li><hr>
+				<li><a href="friends">Your Friends</a></li>
+				<li><a href="gallery">Your Photos</a></li><hr>
+				<li><a href="viewGroups">Your Groups</a></li>
+				<li><a href="groupchat">Group Chats</a></li><hr>
+				<li><a href="upcomingEvents">Upcoming Events</a></li>
+				<li><a href="browseActivities">Browse Activities</a></li><hr>
+				<a href="#menu-toggle" id="menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+					</span> Back</button></a>
+				<a href="index"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
+					</span> Log Out</button></a>
+			</div>
+		</div> <!-- end of sidebar wrapper -->
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>Your Photos</h1>
+					<p>What You've Uploaded</p>
+				</div>
+
+				<div class="miniNavBar">
+					<table class="miniNavTable"> 
+						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    Toggle Menu
+							</a></td>
+						 <td> <a href="#" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							    Create Album
+							</a></td>
+						</tr>
+					</table>
+				</div>
+				<hr>
+
+				<div class="miniNavBarForGallery">
+					{{#each profile}}
+					<table>
+						<tr>
+							<td><h3>{{date}} w/ {{group}}</h3></td>
+							<td style="padding-top: 15px;"><a onclick="alert('Temporary placeholder until PHP implemented for image upload.')" href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
+						</tr>
+					</table>
+					<div class="galleryscroll">
+						<div class="innergalleryscroll">
+							{{#imageURL}}
+							<img class="fancybox imageThumbnail" src="{{image}}">	
+							{{/imageURL}}
+						</div>
+					</div>	
+					<hr>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+	<script src="js/jquery.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="fotorama/fotorama.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+	<!-- Script for the image gallery -->
+	<script type="text/javascript"> 
+	    $(function($){
+	        var addToAll = true;
+	        var gallery = true;
+	        var titlePosition = 'inside';
+	        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+	            var $this = $(this);
+	            var title = $this.attr('title');
+	            var src = $this.attr('data-big') || $this.attr('src');
+	            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+	            $this.wrap(a);
+	        });
+	        if (gallery)
+	            $('a.fancybox').attr('rel', 'fancyboxgallery');
+	        $('a.fancybox').fancybox({
+	            titlePosition: titlePosition
+	        });
+	    });
+	    $.noConflict();
+	</script>
+
+	<!-- Script for the mini nav bar -->
+	<script>
+		$(document).ready(function() {
+			//var container_width = 50 * $(".innergalleryscroll img").length;
+			//console.log(container_width);
+		   	//$(".innergalleryscroll").css("width", container_width);
+			$("#wrapper").toggleClass("toggled");
+		});
+	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+	     $("#menu3-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+
+</body>
+</html>

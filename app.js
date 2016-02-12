@@ -1,0 +1,62 @@
+
+/**
+ * Module dependencies.
+ */
+
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('express3-handlebars')
+
+//var index = require('./routes/index');
+var addGroup = require('./routes/addGroup');
+var browseActivities = require('./routes/browseActivities');
+var friends = require('./routes/friends');
+var gallery = require('./routes/gallery');
+var groups = require('./routes/groups');
+var groupchat = require('./routes/groupChat');
+var homepage = require('./routes/homepage');
+var indivGroup = require('./routes/indivGroup');
+var index = require('./routes/index')
+var upcomingEvents = require('./routes/upcomingEvents');
+
+var app = express();
+
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(express.cookieParser('Intro HCI secret key'));
+app.use(express.session());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+// Add routes here
+
+app.get('/', index.viewIndex);
+app.get('/homepage', homepage.home);
+
+// app.get('/', homepage.home);
+app.get('/addGroup', addGroup.addNewGroup);
+app.get('/browseActivities', browseActivities.viewBrowseActivities);
+app.get('/friends', friends.viewFriends);
+app.get('/gallery', gallery.viewGallery);
+app.get('/group/:name', indivGroup.thisGroup);
+app.get('/groupchat', groupchat.viewGroupChat);
+app.get('/viewGroups', groups.viewGroups);
+app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});

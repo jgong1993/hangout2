@@ -1,0 +1,90 @@
+body {background-color: #FFF;}
+.jumbotron {
+	background: url("../images/banner.jpg");
+	background-size: 100%;
+}
+.jumbotron h1, p {
+	text-align: right;
+	color: #10110E;
+}
+
+hr{
+	margin-top: 0.2em;
+}
+.rightMarg { margin-top: -7px; }
+.groupDescrip{text-align: left;}
+
+.groupRows a:link, a:visited, a:hover, a:active{text-decoration: none;}
+.groupRows button{
+	height: 2.15em;
+	width: 100%;
+}
+.groupRows p{
+	text-align: left;	
+	color: black;
+}
+
+.groupRows2 a:link, a:visited, a:hover, a:active{text-decoration: none;}
+.groupRows2 p{
+	text-align: right;	
+	color: black;
+	word-wrap: break-word;
+}
+
+.tableContainer p{
+	text-align: left;
+	padding: 9px;
+}
+.hoverBlue:hover p{
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: blue;
+    text-align: left;
+    color:white;
+}
+.hoverBlack:hover p{
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: black;
+    text-align:left;
+    color:white;
+}
+.hoverGreen:hover p{
+	width: 90%;
+	height:100%;
+    opacity: 0.7;
+    background-color: green;
+    text-align:left;
+    color:white;
+}
+
+.miniNavBar a, a:link, a:visited, a:active{
+	text-decoration: none;
+	color: black;
+	outline: 0;
+	margin-left: 10px;
+}
+
+.miniNavBar a:hover{
+	border-bottom: 3px solid #000;
+	padding-bottom: 5px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px){
+   .miniNavBar {
+   	    width: 100%;    
+   }
+   .miniNavTable{
+   		overflow-x: scroll;
+   		display: inline-block;
+        width: 100%;
+   }
+}
+.imagetitlebar{
+	display: block;
+}
+
+
+

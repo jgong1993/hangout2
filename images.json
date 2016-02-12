@@ -1,0 +1,63 @@
+{
+	"image": [
+		{
+			"imageURL": "images/lorempixel.jumbotron.jpeg"
+		},
+		{
+			"imageURL": "images/icon.jpg"
+		},
+		{
+			"imageURL": "https://giant.gfycat.com/BruisedHarshCapybara.gif"
+		},
+		{
+			"imageURL": "http://thedoghousediaries.com/logos/spaceman.png"
+		},
+		{
+			"imageURL": "http://thedoghousediaries.com/logos/patreon.png"
+		}
+	],
+	"image2": [
+		{
+			"imageURL": "images/lorempixel.jumbotron.jpeg"
+		},
+		{
+			"imageURL": "images/icon.jpg"
+		},
+		{
+			"imageURL": "https://giant.gfycat.com/BruisedHarshCapybara.gif"
+		},
+		{
+			"imageURL": "http://thedoghousediaries.com/logos/spaceman.png"
+		},
+		{
+			"imageURL": "http://thedoghousediaries.com/logos/patreon.png"
+		}
+	],
+	"groups": [
+		{
+			"name": "Trash Squad",
+			"members": "",
+			"description": "a"
+		},
+		{
+			"name": "Opera Fam",
+			"members": "",
+			"description": "b"
+		},
+				{
+			"name": "Amanda's Room",
+			"members": "",
+			"description": "c"
+		},
+		{
+			"name": "Team Marvel",
+			"members": "",
+			"description": "d"
+		},
+		{
+			"name": "Puppy Bowl",
+			"members": "",
+			"description": "e"
+		}
+	]
+}

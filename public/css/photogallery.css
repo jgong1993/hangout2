@@ -1,0 +1,44 @@
+.miniNavBarForGallery a:hover{
+    border-bottom: 3px solid green;
+    padding-bottom: 5px;
+}
+
+.miniNavBarForGallery hr{
+    margin-bottom: -1em;
+}
+
+/*  iPhone 6 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+    .miniNavBarForGallery h3{
+        font-size: 15px;
+    }
+    .galleryscroll{
+        max-width: 370px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: inline-block;
+        width: 375px;
+        height: 100px;
+    }
+    .imageThumbnail{
+        width: 200px;
+        height: 100%;
+    }
+}
+
+.galleryscroll{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 130px;
+}
+.galleryscroll:hover{
+    overflow-x: scroll;
+}
+.innergalleryscroll{
+    width: 5000px;
+}
+.imageThumbnail{
+    width: 200px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>hangouts R us - Your Groups</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="/js/jquery-1.11.0.js"></script> 
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script> 
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/sidebar.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/groups.css" rel="stylesheet"> 
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<ul>
+				<li><a href="homepage.html">Home</a></li>
+				<li><a href="viewGroups.html">Your Groups</a></li>
+				<li><a href="friends.html">Your Friends</a></li>
+				<li><a href="gallery.html">Your Photos</a></li>
+				<li><a href="upcomingEvents.html">Upcoming Events</a></li>
+				<li><a href="browseActivities.html">Browse Activities</a></li>
+				</ul>
+			</div>
+			<a href="index.html"> <button id="logoutButton" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true">
+			</span> Log Out</button></a>
+		</div> <!-- end of sidebar wrapper -->
+
+		<div id="page-content-wrapper">
+			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
+			</a>
+
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>Your Groups</h1>
+				</div>
+
+				<div class="newBtn"><span class="glyphicon glyphicon-plus"></span> New Group</div>
+
+				<!-- COLLAPSABLE FORM FOR NEW GROUP -->
+				<div class="submenu" style="margin-bottom: 20px;">
+					<form role="form" method="get" action="/addGroup">
+					  <div class="form-group">
+					    <label for="friends">Choose Your Friends</label>
+					    <input type="text" class="form-control" id="friends" placeholder="Names" name="friends">
+					  </div>
+					  <div class="form-group">
+					    <label for="name">Choose A Group Name</label>
+					    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
+					  </div>
+					  <div class="form-group">
+					    <label for="description">Description (Optional)</label>
+					    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
+					  </div>
+					  <input type="submit" id="submitBtn" class="btn btn-default" value="Add New Group"></input>
+					  
+					</form>
+				</div>
+				
+
+				<!-- LIST OF YOUR SQUADS -->
+				<div>
+					<ul class="listview">
+						{{#each groups}}
+						<li><a href="groups/{{name}}">{{name}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+						{{/each}}
+					</ul>				
+				</div>
+
+			</div> <!-- END CONTAINER-FLUID -->
+		</div>
+
+	</div>
+
+	 
+	<script>
+		$('.newBtn')
+		.css({cursor: "pointer"})
+		.on('click', function(){
+		  $(this).next('div').toggle();
+		})
+
+		function hideDiv(){
+		 	$("#wrapper").toggleClass("toggled");
+		 }
+		 window.onload = hideDiv; 
+		 
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+</body>
+</html>

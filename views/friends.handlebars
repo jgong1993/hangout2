@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>hangouts R us - Friends</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+ 	<link href="css/style.css" rel="stylesheet">
+ 	<link href="css/photogallery.css" rel="stylesheet">
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+	<style type="text/css">
+	    a.fancybox img {
+	        border: none;
+	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+	    } 
+	</style>
+	<!-- this is a comment in HTML -->    
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<li><div id="profileName">
+						<img align="middle" class="img-rounded" src="images/icson.jpg" onError="this.src='images/placeholder.png';"> </img>
+					</div>
+					<a id="sidebarName"> Cheese Corn</a>
+				</li><hr>
+				<li><a href="/">Home</a></li><hr>
+				<li><a href="friends">Your Friends</a></li>
+				<li><a href="gallery">Your Photos</a></li><hr>
+				<li><a href="viewGroups">Your Groups</a></li>
+				<li><a href="groupchat">Group Chats</a></li><hr>
+				<li><a href="upcomingEvents">Upcoming Events</a></li>
+				<li><a href="browseActivities">Browse Activities</a></li><hr>
+				<a href="#menu-toggle" id="menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+					</span> Back</button></a>
+				<a href="index"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
+					</span> Log Out</button></a>
+			</div>
+		</div> <!-- end of sidebar wrapper -->
+
+		<div id="page-content-wrapper">
+			<!-- <a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
+			</a> -->
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>Your Friends</h1>
+					<p>oh look! you have friends!</p>
+				</div>
+				<div class="miniNavBar">
+					<table class="miniNavTable"> 
+						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    Toggle Menu
+							</a></td>
+							<td> <a href="#showGroup" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							    New Group
+							</a></td>
+						</tr>
+					</table>
+				</div>
+				<hr>
+
+				<h3>Your Friends</h3>
+				<div>
+					<ul>
+					<li>Kevin</li>
+					<li>Kevin</li>
+					<li>Kevin</li>
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#wrapper").toggleClass("toggled");
+		});
+
+		$("#showGroup").click(function(e) {
+	        e.preventDefault();
+	        $("#submenu").toggle();
+	    });
+	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+	     $("#menu3-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.listview {
+	background-color: #f1f1f1;
+	border: 3px solid #555;
+	border-radius: 5px;
+	list-style-type: none;
+	text-decoration: none;
+
+}
+
+.listview > li {
+	border-top: 3px solid #555;
+	list-style-type: none;
+	margin-left: 0px;
+	text-decoration: none;
+	position:relative;
+	display:block;
+}
+
+ul.listview > li:first-child {
+	border-top: none;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.listview > li a{
+	border: none;
+	display: block;
+	padding: 20px 40px;
+}
+
+.listview > li:hover {
+	background-color: #555;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.submenu {
+	display: none;
+	position: relative;
+}
+
+.submenu > li{
+	background-color: #fff;
+	border-top: 1px solid #555;
+	list-style: none;
+	padding: 10px;
+	text-decoration: none;
+	position:relative;
+	display:block;
+}
+
+.newBtn {
+	display: block;
+	margin-bottom: 20px;
+}
+

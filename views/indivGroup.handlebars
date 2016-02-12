@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>hangouts R us - This Group</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="/js/jquery-1.11.0.js"></script> 
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script> 
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/sidebar.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/groups.css" rel="stylesheet"> 
+
+
+	<!-- this is a comment in HTML -->    
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div id="sidebar-wrapper">	
+			<div class="sidebar-nav">
+				<ul>
+					<li><a href="homepage.html">Home</a></li>
+					<li><a href="viewGroups.html">Your Groups</a></li>
+					<li><a href="friends.html">Your Friends</a></li>
+					<li><a href="gallery.html">Your Photos</a></li>
+					<li><a href="upcomingEvents.html">Upcoming Events</a></li>
+					<li><a href="browseActivities.html">Browse Activities</a></li>
+				</ul>
+			</div>
+			<a href="index.html"> <button id="logoutButton" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true">
+			</span> Log Out</button></a>
+		</div> <!-- end of sidebar wrapper -->
+
+		<div id="page-content-wrapper">
+			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
+			</a>
+
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>{{groupName}}</h1>
+				</div>
+
+				<div>
+					<ul class="listview">
+						<li class="submenu"><a href="#">Members<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right;"></a></li>
+							<ul class="submenu">
+								<li>Diana</li>
+								<li>Ivy</li>
+								<li>Kathy</li>
+								<!-- Make Edit Option elsewhere -->
+								<li><a href="#" style="display:block;"><span class="glyphicon glyphicon-edit"></span> Edit</a></li>
+							</ul>
+						<li><a href="upcomingEvents.html">Upcoming Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+						<li><a href="planEvent.html" class="planEvent.html">Plan a New Event<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+						<li><a href="gallery.html">Photos<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+						<li><a href="upcomingEvents.html">Past Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-remove"></span> Leave Group</a></li>
+					</ul>				
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+		$('li.submenu')
+		.css({cursor: "pointer"})
+		.on('click', function(){
+		  $(this).next('ul').toggle();
+		})
+
+		function hideDiv(){
+		 	$("#wrapper").toggleClass("toggled");
+		 }
+		 window.onload = hideDiv; 
+		 
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+</body>
+</html>
