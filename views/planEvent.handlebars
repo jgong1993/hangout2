@@ -18,30 +18,38 @@
 		<!-- p means paragraph -->
 		<div id="sidebar-wrapper">	
 			<div class="sidebar-nav">
-				<ul>
-					<li><a>Welcome, [you]!</a></li><hr>
-					<li><a href="homepage.html">Home</a></li>
-					<li><a href="friends.html">Your Friends</a></li>
-					<li><a href="gallery.html">Your Photos</a></li>
-					<li><a href="viewGroups.html">Your Groups</a></li>
-					<li><a href="groupchat.html">Group Chats</a></li>
-					<li><a href="/upcomingEvents">Upcoming Events</a></li>
-					<li><a href="browseActivities.html">Browse Activities</a></li>
-				</ul>
+				<li><div id="profileName">
+						<img align="middle" class="img-rounded" src="images/icson.jpg" onError="this.src='images/placeholder.png';"> </img>
+					</div>
+					<a id="sidebarName"> Cheese Corn</a>
+				</li><hr>
+				<li><a href="homepage">Home</a></li><hr>
+				<li><a href="friends">Your Friends</a></li>
+				<li><a href="gallery">Your Photos</a></li>
+				<li><a href="viewGroups">Your Groups</a></li>
+				<li><a href="upcomingEvents">Upcoming Events</a></li>
+				<a href="#menu-toggle" id="menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+					</span> Back</button></a>
+				<a href="index"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
+					</span> Log Out</button></a>
 			</div>
-			<a href="index.html"> <button id="logoutButton" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true">
-			</span> Log Out</button></a>
 		</div> <!-- end of sidebar wrapper -->
 
 		<div id="page-content-wrapper">
-			<a style = "position:absolute; top:15; left:15;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-				<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>    Toggle Menu
-			</a>
 			<div class="container-fluid">
 				<div class="jumbotron">
 					<h1>Plan an Event</h1>
 				</div>
-				
+				<div class="miniNavBar">
+					<table class="miniNavTable"> 
+						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    Toggle Menu
+							</a></td>
+						</tr>
+					</table>
+				</div>
+				<hr>
+
 				<form id="planEventForm" role="form" method="get" action="/planEventResult">
 				<h3>Suggest an event below</h3>
 			    <div class="form-group">
@@ -67,12 +75,19 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.js"></script>
 	<script>
-		function hideDiv(){
-		 	$("#wrapper").toggleClass("toggled");
-		 }
-		 window.onload = hideDiv; 
-		 
-	    $("#menu-toggle").click(function(e) {
+		$(document).ready(function() {
+			$("#wrapper").toggleClass("toggled");
+		});
+
+		$("#showGroup").click(function(e) {
+	        e.preventDefault();
+	        $("#submenu").toggle();
+	    });
+	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+	     $("#menu3-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
 	    });
