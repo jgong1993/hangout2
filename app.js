@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 
 //var index = require('./routes/index');
 var addGroup = require('./routes/addGroup');
+var addFriend = require('./routes/addFriend');
 var browseActivities = require('./routes/browseActivities');
 var friends = require('./routes/friends');
 var gallery = require('./routes/gallery');
@@ -54,6 +55,7 @@ app.get('/homepage', homepage.home);
 
 // app.get('/', homepage.home);
 app.get('/addGroup', addGroup.addNewGroup);
+app.get('/addFriend', addFriend.addNewFriend);
 app.get('/browseActivities', browseActivities.viewBrowseActivities);
 app.get('/friends', friends.viewFriends);
 app.get('/gallery', gallery.viewGallery);
