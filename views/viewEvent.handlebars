@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>hangouts R us - Plan an Event</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/sidebar.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/dropdown.css" rel="stylesheet">
+	<!-- this is a comment in HTML -->    
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div id="wrapper">
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1>{{eventTitle}}</h1>
+
+				</div>
+				{{> dropdownPartial}}
+				<hr>
+				<div>
+					<h1>{{eventTitle}}</h1>
+					<h2>Details:</h2>
+					<h3>Group: {{group}}</h3>
+					<h3>When: {{when}}</h3>
+					<h3>Friends who are attending: {{whoisgoing}}</h3>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/dropdown.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#wrapper").toggleClass("toggled");
+		});
+
+		$("#showGroup").click(function(e) {
+	        e.preventDefault();
+	        $("#submenu").toggle();
+	    });
+	    $("#menu2-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+	     $("#menu3-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+</body>
+</html>

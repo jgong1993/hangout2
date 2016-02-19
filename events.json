@@ -3,31 +3,31 @@
 	"events": [
 		{
 			"title": "Hike with Trash Squad",
-			"group": "",
+			"group": "Trash Squad",
 			"when": "January 21, 2016",
 			"whoisgoing": ""
 		},
 		{
 			"title": "Concert with Opera Fam",
-			"group": "",
+			"group": "Opera Fam",
 			"when": "February 21, 2016",
 			"whoisgoing": ""
 		},
 		{
 			"title": "Afternoon tea with Amanda's Room",
-			"group": "",
+			"group": "Amanda's Room",
 			"when": "March 21, 2016",
 			"whoisgoing": ""
 		},
 		{
 			"title": "Deadpool movie with Team Marvel",
-			"group": "",
+			"group": "Team Marvel",
 			"when": "February 12, 2016",
 			"whoisgoing": ""
 		},
 		{
 			"title": "Superbowl with Puppy Bowl",
-			"group": "",
+			"group": "Puppy Bowl",
 			"when": "February 9, 2016",
 			"whoisgoing": ""
 		}

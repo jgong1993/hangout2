@@ -2,6 +2,7 @@ body {background-color: #FFF;}
 .jumbotron {
 	background: url("../images/banner.jpg");
 	background-size: 100%;
+	margin-bottom: 0px;
 }
 .jumbotron h1, p {
 	text-align: right;
@@ -60,6 +61,10 @@ hr{
     color:white;
 }
 
+.content-container{
+	padding: 20px;
+}
+
 .miniNavBar a, a:link, a:visited, a:active{
 	text-decoration: none;
 	color: black;
@@ -67,7 +72,7 @@ hr{
 	margin-left: 10px;
 }
 
-.miniNavBar a:hover{
+/*.miniNavBar a:hover{
 	border-bottom: 3px solid #000;
 	padding-bottom: 5px;
 }
@@ -81,10 +86,13 @@ hr{
    		display: inline-block;
         width: 100%;
    }
-}
+}*/
 .imagetitlebar{
 	display: block;
 }
 
-
+.center {
+    margin: 0 auto;
+    width: 80%;
+}
 

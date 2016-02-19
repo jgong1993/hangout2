@@ -13,54 +13,24 @@
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/sidebar.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 	<link href="/css/groups.css" rel="stylesheet"> 
-
+	<link href="/css/dropdown.css" rel="stylesheet">
 
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 <body>
 	<div id="wrapper">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		<div id="sidebar-wrapper">	
-			<div class="sidebar-nav">
-				<li><div id="profileName">
-						<img align="middle" class="img-rounded" src="images/icson.jpg" onError="this.src='/images/placeholder.png';"> </img>
-					</div>
-					<a id="sidebarName"> Cheese Corn</a>
-				</li><hr>
-				<li><a href="/homepage">Home</a></li><hr>
-				<li><a href="/friends">Your Friends</a></li>
-				<li><a href="/gallery">Your Photos</a></li>
-				<li><a href="/viewGroups">Your Groups</a></li>
-				<li><a href="/upcomingEvents">Upcoming Events</a></li>
-				<a href="#menu-toggle" id="menu2-toggle"> <button id="backButton" type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
-					</span> Back</button></a>
-				<a href="index"> <button id="logoutButton" type="button" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true">
-					</span> Log Out</button></a>
-			</div>
-		</div> <!-- end of sidebar wrapper -->
-
 		<div id="page-content-wrapper">
 
 			<div class="container-fluid">
 				<div class="jumbotron">
 					<h1>{{groupName}}</h1>
 				</div>
+				{{> dropdownPartial}}
 
-				<div class="miniNavBar">
-					<table class="miniNavTable"> 
-						<tr><td> <a href="#menu-toggle"  id="menu3-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    Toggle Menu
-							</a></td>
-						</tr>
-					</table>
-				</div>
 				<hr>
-
 				<div>
 					<ul class="listview">
 						<li class="submenu"><a href="#">Members<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right;"></a></li>
@@ -84,9 +54,9 @@
 		</div>
 	</div>
 
-	 
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.js"></script>
+	<script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/dropdown.js"></script>
 	<script>
 		$('li.submenu')
 		.css({cursor: "pointer"})
