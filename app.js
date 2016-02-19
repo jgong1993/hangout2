@@ -61,6 +61,8 @@ app.get('/gallery', gallery.viewGallery);
 app.get('/group/:name', indivGroup.thisGroup);
 app.get('/groupchat', groupchat.viewGroupChat);
 app.get('/viewGroups', groups.viewGroups);
+app.get('/viewGroups/:groupName', indivGroup.leaveGroup);
+app.get('/editGroup', indivGroup.editGroup);
 //app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
 
 //upcoming events for a particular group
