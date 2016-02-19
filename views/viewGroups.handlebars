@@ -38,8 +38,13 @@
 				<div id="submenu" style="margin-bottom: 20px;">
 					<form role="form" method="get" action="/addGroup">
 					  <div class="form-group">
-					    <label for="friends">Choose Your Friends</label>
-					    <input type="text" class="form-control" id="friends" placeholder="Names" name="friends">
+					     <label for="friends">Choose Your Friends</label><br> 
+					     <div class="scrollable">
+					    <!-- <input type="text" class="form-control" id="friends" placeholder="Names" name="friends"> -->
+						  {{#each friends}}
+						  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
+						  {{/each}}
+						</div>
 					  </div>
 					  <div class="form-group">
 					    <label for="name">Choose A Group Name</label>

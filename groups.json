@@ -2,28 +2,88 @@
 	"groups": [
 		{
 			"name": "Trash Squad",
-			"members": "",
+			"members": ["Diana", "Ivy", "Kathy"],
 			"description": "The homies"
 		},
 		{
 			"name": "Opera Fam",
-			"members": "",
+			"members": ["Amanda", "Bryan", "David", "Johnson"],
 			"description": "Ahhhhhh, ok. We be singing"
 		},
 				{
 			"name": "Amanda's Room",
-			"members": "",
+			"members": ["Amanda", "Bryan", "David", "Johnson","Kathy","Will"],
 			"description": "Not sure why Amanda has her own room"
 		},
 		{
 			"name": "Team Marvel",
-			"members": "",
+			"members": ["Cap Rogers", "Deadpool", "Iron Man"],
 			"description": "Fighting crime in our dreams"
 		},
 		{
 			"name": "Puppy Bowl",
-			"members": "",
+			"members": ["Charlie", "Portland"],
 			"description": "Puppiessssssss"
+		}
+	],
+
+		"friends": [
+		{
+			"name": "Ali Aidarov"
+		},
+		{
+			"name": "Kann Chea"
+		},
+		{
+			"name": "Arnold Chen"
+		},
+		{
+			"name": "Robert Cheng"
+		},
+		{
+			"name": "Silvia Chyou"
+		},
+		{
+			"name": "Johnson Gong"
+		},
+		{
+			"name": "Aeri Iamsirithaworn"
+		},
+		{
+			"name": "Ryan Gurney"
+		},
+		{
+			"name": "Kelvin Lim"
+		},
+		{
+			"name": "Kevin Lim"
+		},
+		{
+			"name": "Kathy Luu"
+		},
+		{
+			"name": "Von Jhiro Aguila Mandocdoc"
+		},
+		{
+			"name": "Scott Miller"
+		},
+		{
+			"name": "James Natanauan"
+		},
+		{
+			"name": "Carolyn Thio"
+		},
+		{
+			"name": "Harrison Wang"
+		},
+		{
+			"name": "Jenny Wang"
+		},
+		{
+			"name": "Mubin Wang"
+		},
+		{
+			"name": "Kyle Zhu"
 		}
 	]
 }
