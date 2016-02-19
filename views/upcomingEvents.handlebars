@@ -9,6 +9,8 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/dropdown.css" rel="stylesheet">
+	<link href="css/voting.css" rel="stylesheet">
+
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
@@ -19,41 +21,66 @@
 					<h1>Upcoming Events</h1>
 				</div>
 				{{> dropdownPartial}}
-				<hr>
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				  <div class="btn-group" role="group">
+				    <button id="planEvent" type="button" class="btn btn-default">Plan Event</button>
+				  </div>
+				  <div class="btn-group" role="group">
+				    <button id="suggestEvent" type="button" class="btn btn-default">Suggest Events</button>
+				  </div>
+				</div>
 				
-				<a href="/planEvent">Plan a New Event!</a>
-				{{#each events}}
-					<a href="viewEvent/{{title}}">
-					<div>
-						<h2>{{title}}</h2>
-						<h4>{{when}}</h4>
-						<hr>
-						<h3>{{whoisgoing}}</h3>
-					</div>
-				</a>
-				{{/each}}
+				<div class="leftDiv">
+					<a href="/planEvent"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>
+					{{#each events}}
+						<a href="viewEvent/{{title}}">
+						<div>
+							<h2>{{title}}</h2>
+							<h4>{{when}}</h4>
+							<hr>
+							<h3>{{whoisgoing}}</h3>
+						</div>
+					</a>
+					{{/each}}
+				</div>
+				<div class="rightDiv">
+					<table id="voteTable" class="table">
+					  <thead>
+				        <tr>
+				            <th></th>
+				            <th>Votes</th>
+				        </tr>
+				    </thead>
+				    <tbody class="voteres">
+				     {{#each events}}	
+					  <tr id={{id}}>
+					  	<th>{{title}}</th>
+					  	<td id="val"> 0 </td>
+					  </tr>
+					  {{/each}}
+					</tbody>
+					</table>
+				</div>
 			</div>
 	</div>
 
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/dropdown.js"></script>
+	<script src="js/voting.js"> </script>
 	<script>
 		$(document).ready(function() {
-			$("#wrapper").toggleClass("toggled");
-		});
-
-		$("#showGroup").click(function(e) {
-	        e.preventDefault();
-	        $("#submenu").toggle();
-	    });
-	    $("#menu2-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-	     $("#menu3-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
+			$(".rightDiv").hide();
+			$("#planEvent").click(function(e) {
+		        e.preventDefault();
+		        $(".leftDiv").show();
+		        $(".rightDiv").hide();
+	    	});
+	    	$("#suggestEvent").click(function(e) {
+		        e.preventDefault();
+		        $(".leftDiv").hide();
+		        $(".rightDiv").show();
+	    	});
 	    });
     </script>
 </body>
