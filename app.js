@@ -62,6 +62,10 @@ app.get('/group/:name', indivGroup.thisGroup);
 app.get('/groupchat', groupchat.viewGroupChat);
 app.get('/viewGroups', groups.viewGroups);
 //app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
+
+//upcoming events for a particular group
+app.get('/upcomingEvents/:groupName', events.viewGroupsEvents);
+
 app.get('/upcomingEvents', events.viewEvents);
 app.get('/viewEvent/:title', viewEvent.viewThisEvent);
 app.get('/planEvent', planEvent.planEventView);
