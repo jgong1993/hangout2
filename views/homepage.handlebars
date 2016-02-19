@@ -116,7 +116,10 @@
 		        		$('.outershellGallery').children().not("#galleryscroll2").hide();
 		        		var isHidden = $( "#galleryscroll2" ).is( ":hidden" );
 		        		if(isHidden){
-			            	$("#galleryscroll2").show(); 
+			            	$("#galleryscroll2").show();
+			            	if ($("#galleryscroll2").is(':visible')) {
+							     $("html, body").animate({scrollTop: $("#galleryscroll2").offset().top});
+							  } 
 			        	}else{
 			        		$("#galleryscroll2").toggle(); 
 			        	}
