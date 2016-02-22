@@ -1,6 +1,4 @@
-
-{
-	"events": [
+ [
 		{
 			"id" : "e0",
 			"title": "Hike with Trash Squad",
@@ -16,8 +14,8 @@
 			"group": "Trash Squad",
 			"when": "March 16, 2016",
 			"whoisgoing": "Kathy, Diana and Ivy",
-			"start": "2016-02-21T17:00:00",
-			"end": "2016-02-21T18:00:00"
+			"start": "2016-02-22T17:00:00",
+			"end": "2016-02-22T18:00:00"
 		},
 		{
 			"id" : "e2",
@@ -26,7 +24,7 @@
 			"when": "February 21, 2016",
 			"whoisgoing": "Luciano Pavarotti, Placido Domingo",
 			"start": "2016-02-21T18:00:00",
-			"end": "2016-02-21T19:00:00"
+			"end": "2016-02-21T22:00:00"
 		},
 		{
 			"id" : "e3",
@@ -43,8 +41,8 @@
 			"group": "Team Marvel",
 			"when": "February 12, 2016",
 			"whoisgoing": "Ironman and Thor",
-			"start": "2016-02-21T20:00:00",
-			"end": "2016-02-21T21:00:00"
+			"start": "2016-02-23T20:00:00",
+			"end": "2016-02-23T21:00:00"
 		},
 		{
 			"id" : "e5",
@@ -52,8 +50,7 @@
 			"group": "Puppy Bowl",
 			"when": "February 9, 2016",
 			"whoisgoing": "Semifinal losers",
-			"start": "2016-02-21T21:00:00",
-			"end": "2016-02-21T22:00:00"
+			"start": "2016-02-24T21:00:00",
+			"end": "2016-02-24T22:00:00"
 		}
 	]
-}

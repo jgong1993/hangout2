@@ -23,39 +23,35 @@
 </head>
 
 <body>
-	<div id="wrapper">
-		<div class="container-fluid">
-			<div class="jumbotron">
-				<h1>hangouts R us</h1>
-				<p>nothing to do? we got something for ya</p>
-			</div>
-			{{> dropdownPartial}}
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>hangouts R us</h1>
+			<p>nothing to do? we got something for ya</p>
 		</div>
-		<div class="content-container">
-			<!-- BEGIN OF CALENDAR DIV --> 
-			<div id='calendar'>
-			</div>
-			<!-- END OF CALANDER -->
-
-			<div class="outershellGallery">
-				<div id= "galleryscroll1" style="margin-top:10px"  class="galleryscroll">
-						<div class="innergalleryscroll">
-						{{#each image}}
-							<img class="fancybox imageThumbnail" src="{{imageURL}}">
-						{{/each}}
-						</div>
-				</div>	
-				<div id= "galleryscroll2" style="margin-top:10px"  class="galleryscroll">
-						<div class="innergalleryscroll">
-						  {{#each image2}}
-							<img class="fancybox imageThumbnail" src="{{imageURL}}">
-						  {{/each}}	
-						</div>
-				</div>	
-			</div>
-		</div>
+		{{> dropdownPartial}}
 	</div>
 
+	<div class="bodyContainer">
+		<div id='calendar'>
+		</div>
+
+		<div class="outershellGallery">
+			<div id= "galleryscroll1" style="margin-top:10px"  class="galleryscroll">
+					<div class="innergalleryscroll">
+					{{#each image}}
+						<img class="fancybox imageThumbnail" src="{{imageURL}}">
+					{{/each}}
+					</div>
+			</div>	
+			<div id= "galleryscroll2" style="margin-top:10px"  class="galleryscroll">
+					<div class="innergalleryscroll">
+					  {{#each image2}}
+						<img class="fancybox imageThumbnail" src="{{imageURL}}">
+					  {{/each}}	
+					</div>
+			</div>	
+		</div>
+	</div>
 	
 
 	<script src="js/jquery.js"></script>
@@ -68,7 +64,6 @@
 
 	<script>
 		$(document).ready(function() {
-			$("#wrapper").toggleClass("toggled");
 			$("#galleryscroll1").hide();
 			$("#galleryscroll2").hide();
 			var starter = moment(event.start).format('YYYY-MM-DD HH:mm:ss');
@@ -126,63 +121,86 @@
 			            return false;
 		        	}
 		    	},
-				events: [
-				{
-					title: 'All Day Event',
-					start: '2016-01-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2016-01-07',
-					end: '2016-01-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2016-01-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2016-01-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: starter,
-					end: '2016-01-13',
-					//url: 'http://www.google.com'
-				},
-				{
-					title: 'Meeting',
-					start: '2016-01-12T10:30:00',
-					end: '2016-01-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2016-02-08T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2016-01-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2016-01-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2016-01-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2016-01-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2016-01-28'
-				}
-			]
+		    	events: function (start, end, timezone, callback) {
+		            $.ajax({
+		                url: '/events.json',
+		                type: "GET",
+		                datatype: 'json',
+		                success: function (doc) {
+		                    var events = [];
+		                    if ( doc != undefined && doc.length > 0) {
+		                        doc.forEach(function ( newEntry ) {
+		                            events.push({
+		                                title: newEntry.title,
+		                                start: newEntry.start,
+		                                end: newEntry.end,
+		                            });
+
+		                        });
+		                    }
+		                    callback(events);
+		                },error: function (err) {
+		                    alert('Error in fetching data' + err);
+		                }
+		            });
+		        }
+			// 	events: [
+			// 	{
+			// 		title: 'All Day Event',
+			// 		start: '2016-01-01'
+			// 	},
+			// 	{
+			// 		title: 'Long Event',
+			// 		start: '2016-01-07',
+			// 		end: '2016-01-10'
+			// 	},
+			// 	{
+			// 		id: 999,
+			// 		title: 'Repeating Event',
+			// 		start: '2016-01-09T16:00:00'
+			// 	},
+			// 	{
+			// 		id: 999,
+			// 		title: 'Repeating Event',
+			// 		start: '2016-01-16T16:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Conference',
+			// 		start: starter,
+			// 		end: '2016-01-13',
+			// 		//url: 'http://www.google.com'
+			// 	},
+			// 	{
+			// 		title: 'Meeting',
+			// 		start: '2016-01-12T10:30:00',
+			// 		end: '2016-01-12T12:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Lunch',
+			// 		start: '2016-02-08T12:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Meeting',
+			// 		start: '2016-01-12T14:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Happy Hour',
+			// 		start: '2016-01-12T17:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Dinner',
+			// 		start: '2016-01-12T20:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Birthday Party',
+			// 		start: '2016-01-13T07:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Click for Google',
+			// 		url: 'http://google.com/',
+			// 		start: '2016-01-28'
+			// 	}
+			// ]
 			
     		});
 		});

@@ -2,51 +2,47 @@
 
 <html>
 <head>
-	<title>hangouts R us - Plan an Event</title>	
+	<title>hangouts R us - Plan an Event</title>
+		
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/dropdown.css" rel="stylesheet">
-	<!-- this is a comment in HTML -->    
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 <body>
-	<div id="wrapper">
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>Plan an Event</h1>
-				</div>
-				{{> dropdownPartial}}
-				<hr>
-
-				<form id="planEventForm" role="form" method="get" action="/planEventResult">
-				<h3>Suggest an event below</h3>
-			    <div class="form-group">
-			      <label for="title">What do you wanna do:</label>
-			      <input type="text" class="form-control" id="title" placeholder="Example: go on a shopping spree" name="title">
-			    </div>
-
-			    <div class="form-group">
-			      <label for="selectsquad">Choose your group:</label>
-			      <select name="group">
-			      	{{#each groups}}
-			      	<option value="{{name}}">{{name}}</option>
-			      	{{/each}}
-			      </select>
-			    </div>
-
-			    <div class="form-group">
-			      <label for="plandate">When do you want to do it:</label>
-			      <input type="text" class="form-control" id="plandate" placeholder="Example: February 29" name="when">
-			    </div>
-
-			    <input type="submit" id="submitBtn" class="btn btn-default" value="Suggest this event!"></input>
-			</form>
-
-			</div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Plan an Event</h1>
 		</div>
+		{{> dropdownPartial}}
+	</div>
+	<div class="bodyContainer">
+		<form id="planEventForm" role="form" method="get" action="/planEventResult">
+			<h3>Suggest an event below</h3>
+		    <div class="form-group">
+		      <label for="title">What do you wanna do:</label>
+		      <input type="text" class="form-control" id="title" placeholder="Example: go on a shopping spree" name="title">
+		    </div>
+
+		    <div class="form-group">
+		      <label for="selectsquad">Choose your group:</label>
+		      <select name="group">
+		      	{{#each groups}}
+		      	<option value="{{name}}">{{name}}</option>
+		      	{{/each}}
+		      </select>
+		    </div>
+
+		    <div class="form-group">
+		      <label for="plandate">When do you want to do it:</label>
+		      <input type="text" class="form-control" id="plandate" placeholder="Example: February 29" name="when">
+		    </div>
+
+		    <input type="submit" id="submitBtn" class="btn btn-default" value="Suggest this event!"></input>
+		</form>
 	</div>
 
 	<script src="js/jquery.js"></script>
@@ -61,14 +57,6 @@
 		$("#showGroup").click(function(e) {
 	        e.preventDefault();
 	        $("#submenu").toggle();
-	    });
-	    $("#menu2-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-	     $("#menu3-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
 	    });
     </script>
 </body>

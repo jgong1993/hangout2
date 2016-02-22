@@ -4,7 +4,7 @@
 <head>
 	<title>hangouts R us - This Group</title>	
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
 	<script src="/js/jquery-1.11.0.js"></script> 
 	<script src="/js/bootstrap.js"></script>
@@ -15,66 +15,52 @@
 	<link href="/css/style.css" rel="stylesheet">
 	<link href="/css/groups.css" rel="stylesheet"> 
 	<link href="/css/dropdown.css" rel="stylesheet">
-
-	<!-- this is a comment in HTML -->    
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 <body>
-	<div id="wrapper">
-		<div id="page-content-wrapper">
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>{{groupName}}</h1>
+			<p style="color:white;">{{description}}</p>
+		</div>
+		{{> dropdownPartial}}
+	</div>
 
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>{{groupName}}</h1>
-					<h2 style="float:right; color:white;">{{description}}</h2>
+	<div class="bodyContainer">
+		<a href="#edit-group" id="edit-group"><span class="glyphicon glyphicon-edit"></span>Edit Group Info</a>
+		<!-- COLLAPSABLE FORM FOR EDITING GROUP -->
+		<div id="submenu" style="margin-bottom: 20px;">
+			<form role="form" method="get" action="/editGroup">
+			  <div class="form-group">
+			    <label for="friends">Add Friend(s) To {{groupName}}</label><br> 
+			    <div class="scrollable">
+				  {{#each friends}}
+				  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
+				  {{/each}}
 				</div>
-				{{> dropdownPartial}}
-				<hr>
-				<a href="#edit-group" id="edit-group"><span class="glyphicon glyphicon-edit"></span>Edit Group Info</a>
-				<!-- COLLAPSABLE FORM FOR EDITING GROUP -->
-				<div id="submenu" style="margin-bottom: 20px;">
-					<form role="form" method="get" action="/editGroup">
-					  <div class="form-group">
-					    <label for="friends">Add Friend(s) To {{groupName}}</label><br> 
-					    <div class="scrollable">
-						  {{#each friends}}
-						  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
-						  {{/each}}
-						</div>
-					  </div>
-					  <div class="form-group">
-					    <label for="name">New Group Name</label>
-					    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
-					  </div>
-					  <div class="form-group">
-					    <label for="description">New Description</label>
-					    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
-					  </div>
-					  <input type="submit" id="submitBtn" class="btn btn-default" name="origName" value="Update {{groupName}}"></input>
-					  
-					</form>
-				</div>
-				<div>
-					<ul class="listview">
-						<li class="submenu"><a href="#">Members<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right;"></a></li>
-							<ul class="submenu">
-								<li> {{members}} </li>
-								<!-- <li>Diana</li>
-								<li>Ivy</li>
-								<li>Kathy</li> -->
-								<!-- Make Edit Option elsewhere -->
-								<!-- <li><a href="#" style="display:block;"><span class="glyphicon glyphicon-edit"></span> Edit</a></li> -->
-							</ul>
-						<li><a href="/upcomingEvents/{{groupName}}">Upcoming Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-						<li><a href="/planEvent" class="planEvent.html">Plan a New Event<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-						<li><a href="/gallery">Photos<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-						<li><a href="/upcomingEvents">Past Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-						<li><a href="/viewGroups/{{groupName}}"><span class="glyphicon glyphicon-remove"></span> Leave {{groupName}}</a></li>
-					</ul>				
-				</div>
-
-			</div>
-
+			  </div>
+			  <div class="form-group">
+			    <label for="name">New Group Name</label>
+			    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="description">New Description</label>
+			    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
+			  </div>
+			  <input type="submit" id="submitBtn" class="btn btn-default" name="origName" value="Update {{groupName}}"></input>
+			</form>
+		</div>
+		<div>
+			<ul class="listview">
+				<li class="submenu"><a href="#">Members<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right;"></a></li>
+					<ul class="submenu">
+						<li> {{members}} </li>
+					</ul>
+				<li><a href="/upcomingEvents/{{groupName}}">Upcoming Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				<li><a href="/planEvent" class="planEvent.html">Plan a New Event<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				<li><a href="/gallery">Photos<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				<li><a href="/upcomingEvents">Past Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				<li><a href="/viewGroups/{{groupName}}"><span class="glyphicon glyphicon-remove"></span> Leave {{groupName}}</a></li>
+			</ul>				
 		</div>
 	</div>
 
@@ -94,18 +80,8 @@
 		});
 
 		$(document).ready(function() {
-			$("#wrapper").toggleClass("toggled");
 			$("#submenu").hide();
 		});
-		 
-	     $("#menu2-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-	     $("#menu3-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
     </script>
 </body>
 </html>

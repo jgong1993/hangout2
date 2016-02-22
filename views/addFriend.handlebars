@@ -3,61 +3,48 @@
 <html>
 <head>
 	<title>hangouts R us - Friends</title>	
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
  	<link href="css/style.css" rel="stylesheet">
- 	<link href="css/photogallery.css" rel="stylesheet">
-	<link rel='stylesheet' href='fullcalendar/fullcalendar.css'>
-	<link href="css/dropdown.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
-	<style type="text/css">
-	    a.fancybox img {
-	        border: none;
-	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
-	    } 
-	</style>
-	<!-- this is a comment in HTML -->    
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link href="css/dropdown.css" rel="stylesheet"> 
 </head>
 <body>
-	<div id="wrapper">
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>Your Friends</h1>
-					<p>oh look! you have friends!</p>
-				</div>
-				{{> dropdownPartial}}
-				<hr>
-				<a href="#showGroup" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-							    Add Friend
-							</a>
-
-				<h3>New Friend Successfully Added!</h3>
-
-				<!-- COLLAPSABLE FORM FOR NEW FRIEND -->
-				<div id="submenu" style="margin-bottom: 20px;">
-					<form role="form" method="get" action="/addFriend">
-					  <div class="form-group">
-					    <label for="name">New Friend's Email/ID</label>
-					    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
-					  </div>
-					  <input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
-					</form>
-				</div>
-
-
-				<h3>Your Friends</h3>
-				{{#each friends}}
-				<div>
-					<ul>
-					<li>{{name}}</li>
-					</ul>					
-				</div>
-				{{/each}}
-			</div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Your Friends</h1>
+			<p>oh look! you have friends!</p>
 		</div>
+		{{> dropdownPartial}}
+	</div>
+
+	<div class="bodyContainer">
+		<a href="#showGroup" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			Add Friend </a>
+		<h3>New Friend Successfully Added!</h3>
+
+		<!-- COLLAPSABLE FORM FOR NEW FRIEND -->
+		<div id="submenu" style="margin-bottom: 20px;">
+			<form role="form" method="get" action="/addFriend">
+			  <div class="form-group">
+			    <label for="name">New Friend's Email/ID</label>
+			    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+			  </div>
+			  <input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
+			</form>
+		</div>
+
+		<h3>Your Friends</h3>
+		{{#each friends}}
+		<div>
+			<ul>
+			<li>{{name}}</li>
+			</ul>					
+		</div>
+		{{/each}}
 	</div>
 
 	 
@@ -66,21 +53,12 @@
 	<script src="js/dropdown.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#wrapper").toggleClass("toggled");
 			$("#submenu").hide();
 		});
 
 		$("#showGroup").click(function(e) {
 	        e.preventDefault();
 	        $("#submenu").toggle();
-	    });
-	    $("#menu2-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-	     $("#menu3-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
 	    });
     </script>
 </body>

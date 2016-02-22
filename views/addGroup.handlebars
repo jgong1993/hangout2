@@ -4,7 +4,7 @@
 <head>
 	<title>hangouts R us - Your Groups</title>	
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
 	<script src="/js/jquery-1.11.0.js"></script> 
 	<script src="/js/bootstrap.js"></script>
@@ -16,64 +16,56 @@
 	<link href="/css/groups.css" rel="stylesheet"> 
 	<link href="css/dropdown.css" rel="stylesheet">
 
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	
 </head>
 <body>
-	<div id="wrapper">
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>Your Groups</h1>
-				</div>
-				{{> dropdownPartial}}
-				<hr>
-				<a href="#showsub" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-							    New Group
-							</a>
-
-				<h3> Successfully added group! </h3>
-				<!-- COLLAPSABLE FORM FOR NEW GROUP -->
-				<div class="submenu" style="margin-bottom: 20px;">
-					<form role="form" method="get" action="/addGroup">
-					  <div class="form-group">
-					    <label for="friends">Choose Your Friends</label><br> 
-					     <div class="scrollable">
-					    <!-- <input type="text" class="form-control" id="friends" placeholder="Names" name="friends"> -->
-						  {{#each friends}}
-						  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
-						  {{/each}}
-						</div>
-					  </div>
-					  <div class="form-group">
-					    <label for="name">Choose A Group Name</label>
-					    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
-					  </div>
-					  <div class="form-group">
-					    <label for="description">Description (Optional)</label>
-					    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
-					  </div>
-					  <input type="submit" id="submitBtn" class="btn btn-default" value="Add New Group"></input>
-					  
-					</form>
-				</div>
-				
-
-				<!-- LIST OF YOUR SQUADS -->
-				<div>
-					<ul class="listview">
-						{{#each groups}}
-						<li><a href="group/{{name}}">{{name}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-						{{/each}}
-					</ul>				
-				</div>
-
-			</div> <!-- END CONTAINER-FLUID -->
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Your Groups</h1>
 		</div>
-
+		{{> dropdownPartial}}
 	</div>
+
+	<div class="bodyContainer">
+		<a href="#showsub" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			New Group </a>
+		<h3> Successfully added group! </h3>
+		<!-- COLLAPSABLE FORM FOR NEW GROUP -->
+		<div class="submenu" style="margin-bottom: 20px;">
+			<form role="form" method="get" action="/addGroup">
+			  <div class="form-group">
+			    <label for="friends">Choose Your Friends</label><br> 
+			     <div class="scrollable">
+				  {{#each friends}}
+				  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
+				  {{/each}}
+				</div>
+			  </div>
+			  <div class="form-group">
+			    <label for="name">Choose A Group Name</label>
+			    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="description">Description (Optional)</label>
+			    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
+			  </div>
+			  <input type="submit" id="submitBtn" class="btn btn-default" value="Add New Group"></input>
+			</form>
+		</div>
+				
+		<!-- LIST OF YOUR SQUADS -->
+		<div>
+			<ul class="listview">
+				{{#each groups}}
+				<li><a href="group/{{name}}">{{name}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				{{/each}}
+			</ul>				
+		</div>
+	</div> <!-- END bodyContainer -->
+	
 	<script src="js/dropdown.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#wrapper").toggleClass("toggled");
 			$("#submenu").hide();
 		});
 

@@ -3,65 +3,67 @@
 <html>
 <head>
 	<title>hangouts R us - Upcoming Events</title>	
+	
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/dropdown.css" rel="stylesheet">
 	<link href="css/voting.css" rel="stylesheet">
-
-	<!-- this is a comment in HTML -->    
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 <body>
-	<div id="wrapper">
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>Upcoming Events</h1>
-				</div>
-				{{> dropdownPartial}}
-				<div class="btn-group btn-group-justified" role="group" aria-label="...">
-				  <div class="btn-group" role="group">
-				    <button id="planEvent" type="button" class="btn btn-default">Plan Event</button>
-				  </div>
-				  <div class="btn-group" role="group">
-				    <button id="suggestEvent" type="button" class="btn btn-default">Vote/Suggest Events</button>
-				  </div>
-				</div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Upcoming Events</h1>
+		</div>
+		{{> dropdownPartial}}
+	</div>
+
+	<div class="bodyContainer">
+		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+		  <div class="btn-group" role="group">
+		    <button id="planEvent" type="button" class="btn btn-default">Plan Event</button>
+		  </div>
+		  <div class="btn-group" role="group">
+		    <button id="suggestEvent" type="button" class="btn btn-default">Vote/Suggest Events</button>
+		  </div>
+		</div>
 				
-				<div class="leftDiv">
-					<a href="/planEvent"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>
-					{{#each events}}
-						<a href="viewEvent/{{title}}">
-						<div>
-							<h2>{{title}}</h2>
-							<h4>{{when}}</h4>
-							<hr>
-							<h3>{{whoisgoing}}</h3>
-						</div>
-					</a>
-					{{/each}}
+		<div class="leftDiv">
+			<br>
+			<a href="/planEvent"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>
+			{{#each events}}
+				<a href="viewEvent/{{title}}">
+				<div>
+					<h2>{{title}}</h2>
+					<h4>{{when}}</h4>
+					<hr>
+					<h3>{{whoisgoing}}</h3>
 				</div>
-				<div class="rightDiv">
-					<table id="voteTable" class="table">
-					  <thead>
-				        <tr>
-				            <th>(Click to vote)</th>
-				            <th>Votes</th>
-				        </tr>
-				    </thead>
-				    <tbody class="voteres">
-				     {{#each events}}	
-					  <tr id={{id}}>
-					  	<th>{{title}}</th>
-					  	<td id="val"> 0 </td>
-					  </tr>
-					  {{/each}}
-					</tbody>
-					</table>
-				</div>
-			</div>
+				</a>
+			{{/each}}
+		</div>
+
+		<div class="rightDiv">
+			<table id="voteTable" class="table">
+			  <thead>
+		        <tr>
+		            <th>(Click to vote)</th>
+		            <th>Votes</th>
+		        </tr>
+		    </thead>
+		    <tbody class="voteres">
+		     {{#each events}}	
+			  <tr id={{id}}>
+			  	<th>{{title}}</th>
+			  	<td id="val"> 0 </td>
+			  </tr>
+			  {{/each}}
+			</tbody>
+			</table>
+		</div>
 	</div>
 
 	<script src="js/jquery.js"></script>

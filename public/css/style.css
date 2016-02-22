@@ -61,32 +61,6 @@ hr{
     color:white;
 }
 
-.content-container{
-	padding: 20px;
-}
-
-.miniNavBar a, a:link, a:visited, a:active{
-	text-decoration: none;
-	color: black;
-	outline: 0;
-	margin-left: 10px;
-}
-
-/*.miniNavBar a:hover{
-	border-bottom: 3px solid #000;
-	padding-bottom: 5px;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 420px){
-   .miniNavBar {
-   	    width: 100%;    
-   }
-   .miniNavTable{
-   		overflow-x: scroll;
-   		display: inline-block;
-        width: 100%;
-   }
-}*/
 .imagetitlebar{
 	display: block;
 }
@@ -96,3 +70,6 @@ hr{
     width: 80%;
 }
 
+.bodyContainer{
+	padding:20px;
+}

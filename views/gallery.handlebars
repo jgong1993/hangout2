@@ -1,56 +1,56 @@
 <!doctype html>
 <html>
 <head>
-	<title>hangouts R us</title>	
+	<title>hangouts R us</title>
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
  	<link href="css/style.css" rel="stylesheet">
  	<link href="css/photogallery.css" rel="stylesheet">
-	<link rel='stylesheet' href='fullcalendar/fullcalendar.css'>
 	<link href="css/dropdown.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+	
 	<style type="text/css">
 	    a.fancybox img {
 	        border: none;
 	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
 	    } 
 	</style>
-	<!-- this is a comment in HTML -->    
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 
 <body>
-	<div id="wrapper">
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<h1>Your Photos</h1>
-					<p>What You've Uploaded</p>
-				</div>
-				{{> dropdownPartial}}
-				<hr>
-
-				<div class="miniNavBarForGallery">
-					{{#each profile}}
-					<table>
-						<tr>
-							<td><h3>{{date}} w/ {{group}}</h3></td>
-							<td style="padding-top: 15px;"><a onclick="alert('Temporary placeholder until PHP implemented for image upload.')" href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
-						</tr>
-					</table>
-					<div class="galleryscroll">
-						<div class="innergalleryscroll">
-							{{#imageURL}}
-							<img class="fancybox imageThumbnail" src="{{image}}">	
-							{{/imageURL}}
-						</div>
-					</div>	
-					<hr>
-					{{/each}}
-				</div>
-			</div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Your Photos</h1>
+			<p>What You've Uploaded</p>
+		</div>
+		{{> dropdownPartial}}
 	</div>
+
+	<div class="bodyContainer">
+		<div class="miniNavBarForGallery">
+			{{#each profile}}
+			<table>
+				<tr>
+					<td><h3>{{date}} w/ {{group}}</h3></td>
+					<td style="padding-top: 15px;"><a onclick="alert('Temporary placeholder until PHP implemented for image upload.')" href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Add image</a></td>
+				</tr>
+			</table>
+			<div class="galleryscroll">
+				<div class="innergalleryscroll">
+					{{#imageURL}}
+					<img class="fancybox imageThumbnail" src="{{image}}">	
+					{{/imageURL}}
+				</div>
+			</div>	
+			<hr>
+			{{/each}}
+		</div>
+	</div>
+
 	 
 	<script src="js/jquery.js"></script> 
     <script src="js/bootstrap.min.js"></script>

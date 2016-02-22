@@ -16,6 +16,7 @@
     position: relative;
     display: inline-block;
     z-index: 12;
+    font-size: 20px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -25,15 +26,14 @@
     background-color: #E6EDFA;
     min-width: 160px;
     width: inherit;
-    margin-top: 30px;
-
+    margin-top: 20px;
    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px px;
+/*    padding: 12px px;*/
     text-decoration: none;
     display: block;
 }
