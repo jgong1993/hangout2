@@ -1,4 +1,5 @@
- [
+ {
+ 	"groups2":[
 		{
 			"id" : "e0",
 			"title": "Hike with Trash Squad",
@@ -96,3 +97,4 @@
 				]
 		}
 	]
+}
