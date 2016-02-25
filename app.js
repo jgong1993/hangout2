@@ -50,7 +50,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 
 app.get('/', index.viewIndex);
-app.get('/homepage', homepage.home);
+//app.get('/homepage', homepage.home);
 
 // app.get('/', homepage.home);
 app.get('/addGroup', addGroup.addNewGroup);
