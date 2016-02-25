@@ -1,11 +1,9 @@
-.miniNavBarForGallery a:hover{
+.miniNavBarForGallery td a:hover{
     border-bottom: 3px solid green;
     padding-bottom: 5px;
 }
 
-.miniNavBarForGallery hr{
-    margin-bottom: -1em;
-}
+
 
 /*  iPhone 6 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
@@ -39,7 +37,9 @@
 }
 .innergalleryscroll{
     width: 5000px;
+    max-height: 130px;
 }
 .imageThumbnail{
     width: 200px;
+    max-height: 130px;
 }

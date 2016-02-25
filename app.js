@@ -73,6 +73,8 @@ app.get('/viewEvent/:title', viewEvent.viewThisEvent);
 app.get('/planEvent', planEvent.planEventView);
 app.get('/planEventResult', planEventResult.addNewEvent);
 
+app.post('/pushImage', gallery.addPhoto);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
