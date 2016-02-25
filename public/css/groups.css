@@ -1,3 +1,6 @@
+body {
+	height:1000px;
+}
 
 .scrollable {
 	background-color: #f1f1f1;
@@ -59,5 +62,49 @@ ul.listview > li:first-child {
 .newBtn {
 	display: block;
 	margin-bottom: 20px;
+}
+
+.cd-popup {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+ 
+.cd-popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container > p {
+	float:left;
+}
+
+.cd-buttons > li {
+	background-color: #fff;
+	border: 1px solid #555;
+	list-style: none;
+	margin: 0px 10px;
+	padding: 10px;
+	padding-right: 20px;
+	text-decoration: none;
+	position:relative;
+	display: inline;
+}
+
+ 
+.cd-popup-container {
+	background-color: #fff;
+    transform: translateY(-40px);
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+ 
+.is-visible .cd-popup-container {
+    transform: translateY(0);
+}
+
+.active-btn {
+	box-shadow: inset 0 0 0 1px #ffffff,inset 0 5px 30px #000;
 }
 

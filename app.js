@@ -19,7 +19,7 @@ var groupchat = require('./routes/groupChat');
 var homepage = require('./routes/homepage');
 var indivGroup = require('./routes/indivGroup');
 var index = require('./routes/index')
-
+var login = require('./routes/login');
 var events = require('./routes/events');
 var viewEvent = require('./routes/viewEvent');
 var planEvent = require('./routes/planEvent');
@@ -60,11 +60,12 @@ app.get('/friends', friends.viewFriends);
 app.get('/gallery', gallery.viewGallery);
 app.get('/group/:name', indivGroup.thisGroup);
 app.get('/groupchat', groupchat.viewGroupChat);
+app.get('/homepage', login.login);
 app.get('/viewGroups', groups.viewGroups);
 app.get('/viewGroups/:groupName', indivGroup.leaveGroup);
 app.get('/editGroup', indivGroup.editGroup);
 //app.get('/upcomingEvents', upcomingEvents.viewUpcomingEvents);
-
+app.get('/register', login.register);
 //upcoming events for a particular group
 app.get('/upcomingEvents/:groupName', events.viewGroupsEvents);
 

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> Hangouts R Us</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
     <link rel="stylesheet" href="css/pure-min.css">
     <link rel="stylesheet" href="css/side-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
 <body>
-    <div class="container">
+    <div id="main">
         <div class="header">
             <h1>Hangouts R Us</h1>
             <h2>You have no idea what to do!</h2>
@@ -24,17 +23,19 @@
 	        .button-xsmall {font-size: 70%;}
 	        .button-small {font-size: 85%;}
 	    </style>
-        <div class="row">
-        	<div class="center">
-			    <div class="col-md-6">
+
+	    <h3 id="note" style="color:blue; text-align:center;">{{note}}</h3>
+
+        <div style="padding: 20px 0px 0px 300px"class="content">
+			    <div style='float:left'>
 					<h2> Login </h2>
-			        <form action = "/menu" class="pure-form pure-form-stacked">
+			        <form method="get" action = "/homepage" class="pure-form pure-form-stacked">
 					    <fieldset>
 					        <label for="email">Email</label>
-					        <input required="" id="email" type="email" placeholder="Email">
+					        <input required="" id="email" type="email" name="email" placeholder="Email">
 
 					        <label for="password">Password</label>
-					        <input required="" id="password" type="password" placeholder="Password">
+					        <input required="" id="password" type="password" name="password" placeholder="Password">
 
 					        <label for="remember" class="pure-checkbox">
 					        <input id="remember" type="checkbox"> Remember me
@@ -44,37 +45,30 @@
 					    </fieldset>
 					</form>
 				</div>
-			</div>
-			<div class="center">
-				<div class="col-md-6">
+
+
+				<div style="padding: 0px 0px 0px 350px">
 					<h2> Sign Up </h2>
-			        <form method="post" action ="/addPerson" class="pure-form pure-form-stacked">
+			        <form role="form" method="get" action="/register" class="pure-form pure-form-stacked">
 					    <fieldset>
 					    	<div>
 						        <label for="email">Email</label>
 						        <input required="" name ="emailSign" id="emailSign" type="email" placeholder="Email">
 
 						        <label for="password">Password</label>
-						        <input required="" name = "passwordSign" id="passwordSign" type="password" placeholder="Password">
+						        <input required="" name="passwordSign" id="passwordSign" type="password" placeholder="Password">
 
-						        <label for="password">Password (again) </label>
-						        <input required="" name = "passwordSign2" id="password2Sign" type="password" placeholder="Password">
+						        <label for="password">Confirm Password</label>
+						        <input required="" name = "password2Sign" id="password2Sign" type="password" placeholder="Password">
 					        </div>
 					        <div style="padding-top:5px">
 					       	 	<button type="submit" class="pure-button pure-button-primary">Sign up</button>
-					    	</div>
+					       	</div>
 					    </fieldset>
 					</form>
 				</div>
-			</div>
-		</div>
-		<div class="center">
-			<a href="homepage"> <h1> TEMPORARY LOGIN BUTTON CLICK HERE </h1></a>
-		</div>
-     
+	        </div> <!-- End of Content -->
     </div> <!-- End of Main -->
-
-    <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
 

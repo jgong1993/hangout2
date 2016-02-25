@@ -59,8 +59,19 @@
 				<li><a href="/planEvent" class="planEvent.html">Plan a New Event<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
 				<li><a href="/gallery">Photos<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
 				<li><a href="/upcomingEvents">Past Events<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-				<li><a href="/viewGroups/{{groupName}}"><span class="glyphicon glyphicon-remove"></span> Leave {{groupName}}</a></li>
-			</ul>				
+				<!-- <li><a href="/viewGroups/{{groupName}}"><span class="glyphicon glyphicon-remove"></span> Leave {{groupName}}</a></li> -->
+				<li><a href="#" span class="glyphicon glyphicon-remove" id="leavegrp"></span> Leave {{groupName}}</a></li>
+			</ul>
+			<div class="cd-popup" role="alert">
+				<div class="cd-popup-container">
+					<p>Are you sure you want to leave this group?</p><br><br>
+					<ul class="cd-buttons">
+						<li id="keep"><a href="#">Keep Group</a></li>
+						<li><a href="/viewGroups/{{groupName}}">Leave Group</a></li>
+					</ul>
+				</div> <!-- cd-popup-container -->
+			</div> <!-- cd-popup -->
+
 		</div>
 	</div>
 
@@ -68,6 +79,15 @@
     <script src="../js/bootstrap.min.js"></script>
 	<script src="../js/dropdown.js"></script>
 	<script>
+		$("#leavegrp").click(function(e) {
+	        e.preventDefault();
+	        $(".cd-popup").addClass("is-visible");
+	    });
+	    $("#keep").click(function(e) {
+	        e.preventDefault();
+	        $(".cd-popup").removeClass("is-visible");
+	    });
+	    
 		$('li.submenu')
 		.css({cursor: "pointer"})
 		.on('click', function(){

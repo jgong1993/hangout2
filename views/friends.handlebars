@@ -11,6 +11,7 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
  	<link href="css/style.css" rel="stylesheet">
 	<link href="css/dropdown.css" rel="stylesheet">
+	<link href="css/groups.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container-fluid">
@@ -24,6 +25,15 @@
 	<div class="bodyContainer">
 		<a href="#showGroup" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			Add Friend </a>
+
+		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+			<div class="btn-group"><a href="#" class="btn btn-default" style="float:left;">Groups</a></div>
+
+			<div class="btn-group"><a href="/friends" class="btn btn-default btn-group active-btn" style="float:right;">Friends</a></div>
+		</div>
+		
+		<br>
+				
 		<!-- COLLAPSABLE FORM FOR NEW FRIEND -->
 		<div id="submenu" style="margin-bottom: 20px;">
 			<form role="form" method="get" action="/addFriend">

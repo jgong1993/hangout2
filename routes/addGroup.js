@@ -2,7 +2,7 @@ var groups = require("../groups.json");
 
 exports.addNewGroup = function(req, res) {    
 	// Your code goes here
-	res.render('addGroup',groups);
+	res.render('viewGroups',{ "groups": groups["groups"],"friends":groups["friends"], "note": "Group Successfully Added!"});
 
 	var friend = req.query.friend;
 	var name = req.query.name;
