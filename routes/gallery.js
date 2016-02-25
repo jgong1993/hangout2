@@ -29,7 +29,8 @@ exports.addPhoto = function(req,res){
 				profile["profile"][i]["imageURL"].push(JSON.parse(newTarget));
 				break;
 			}
-		}        
+		}       
+		res.redirect('gallery'); 
     });
-	res.redirect('gallery');
+	
 };
