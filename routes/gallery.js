@@ -24,13 +24,12 @@ exports.addPhoto = function(req,res){
         }
         var origName = req.body.group;
         for(var i = 0; i < profile.profile.length; i++) {
-			if(profile["profile"][i].group == origName) {
-				var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
-				profile["profile"][i]["imageURL"].push(JSON.parse(newTarget));
-				break;
-			}
-		}       
-		res.redirect('gallery'); 
+  			  if(profile["profile"][i].group == origName) {
+    				var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
+    				profile["profile"][i]["imageURL"].push(JSON.parse(newTarget));
+    				break;
+  			  }
+  		  }       
+		    res.redirect('gallery'); 
     });
-	
 };
