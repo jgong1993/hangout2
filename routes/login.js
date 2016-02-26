@@ -1,5 +1,6 @@
 var login = require("../login.json");
 var images = require("../images.json");
+var eventTest = require("../eventTest.json");
 
 exports.register = function(req, res) {    
 
@@ -56,9 +57,6 @@ exports.login = function(req,res) {
 
 };
 
-
-
-
-
-
-
+exports.login = function(req,res) {
+	res.render('homepage',eventTest);
+};
