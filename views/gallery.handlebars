@@ -14,14 +14,15 @@
 	<link rel="stylesheet" href="css/photoswipe.css"> 
 	<link rel="stylesheet" href="css/default-skin.css"> 
 	<link href="css/tester2.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
 </head>
 
 <body>
 	<div class="container-fluid">
-		<div class="jumbotron">
+<!-- 		<div class="jumbotron">
 			<h1>Your Photos</h1>
 			<p>What You've Uploaded</p>
-		</div>
+		</div> -->
 		{{> dropdownPartial}}
 	</div>
 
@@ -130,7 +131,7 @@
 				<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 				  {{#each imageURL}}
 				  	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-					    <a href="{{image}}" class="thumbnail" itemprop="contentUrl" data-size="1024x1024">
+					    <a href="{{image}}" class="thumbnail" itemprop="contentUrl" data-size="1840x1232">
 					      <img class="imageThumbnail" src="{{image}}" itemprop="thumbnail" alt="Image description" />
 					    </a>
 					</figure>
