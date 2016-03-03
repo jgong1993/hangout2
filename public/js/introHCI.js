@@ -10,9 +10,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
-	$('.story').click(storyClick);
+	$('.story_v_photos').click(storyClick);
 }
 
 function storyClick() {
-	ga('send', 'event', 'story', 'click');
+	ga('send', 'event', 'story_v_photos', 'click');
 }
