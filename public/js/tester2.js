@@ -134,10 +134,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             items;
 
         items = parseThumbnailElements(galleryElement);
-
+        console.log("index: " + index);
+        console.log("fromURL: " + fromURL);
         // define options (if needed)
         options = {
-             shareEl: false,
+            shareEl: false,
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
