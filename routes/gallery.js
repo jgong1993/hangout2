@@ -24,10 +24,10 @@ exports.addPhoto = function(req,res){
             return res.end("Error uploading file.");
         }
         var origName = req.body.group;
-        for(var i = 0; i < profile.profile.length; i++) {
-  			  if(profile["profile"][i].group == origName) {
+        for(var i = 0; i < eventTest.groups2.length; i++) {
+  			  if(eventTest["groups2"][i].group == origName) {
     				var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
-    				profile["profile"][i]["imageURL"].push(JSON.parse(newTarget));
+    				eventTest["groups2"][i]["imageURL"].push(JSON.parse(newTarget));
     				break;
   			  }
   		  }       
