@@ -49,23 +49,6 @@ hr{
 	padding:20px;
 }
 
-.navbar{
-	height:40px;
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
-	.navbar-header a{
-		font-size: 13px;
-		max-width: 90px;
-		padding: 0px;
-		padding-top: 5px;
-		padding-left: 10px;
-	}
-	#titleBar{
-		max-width: 110px;
-		font-size: 14px;
-		color: white;
-	}
-	.pull-right{
-		padding-right: 10px;
-	}
+#navTitle{
+	color:white;
 }
