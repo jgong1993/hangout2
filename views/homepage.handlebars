@@ -11,19 +11,16 @@
  	<link href="css/photogallery.css" rel="stylesheet">
 	<link rel='stylesheet' href='fullcalendar/fullcalendar.css'>
 	<link href="css/dropdown.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
-	<style type="text/css">
-	    a.fancybox img {
-	        border: none;
-	        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
-	    } 
-	</style>
+	<link rel="stylesheet" href="css/photoswipe.css"> 
+	<link rel="stylesheet" href="css/default-skin.css"> 
+	<link href="css/tester2.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="navbarstyle">
 		<div class="jumbotron">
 			<h1>hangouts R us</h1>
 			<p>nothing to do? we got something for ya</p>
@@ -32,57 +29,105 @@
 	</div>
 
 	<div class="bodyContainer">
-		<div id='calendar'>
-		</div>
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
 
-		<div class="outershellGallery">
-			{{#each groups2}}
-				<div id= "{{id}}" style="margin-top:10px"  class="galleryscroll">
-					<div class="innergalleryscroll">
-					{{#each imageURL}}
-						<img class="fancybox imageThumbnail" src="{{image}}">
-					{{/each}}
-					</div>
-				</div>	
-			{{/each}}
-		</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+	    <!-- Background of PhotoSwipe. 
+	         It's a separate element, as animating opacity is faster than rgba(). -->
+	    <div class="pswp__bg"></div>
+
+	    <!-- Slides wrapper with overflow:hidden. -->
+	    <div class="pswp__scroll-wrap">
+
+	        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+	        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+	        <div class="pswp__container">
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	        </div>
+
+	        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+	        <div class="pswp__ui pswp__ui--hidden">
+
+	            <div class="pswp__top-bar">
+
+	                <!--  Controls are self-explanatory. Order can be changed. -->
+
+	                <div class="pswp__counter"></div>
+
+	                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+	                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+	                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+	                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+	                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+	                <!-- element will get class pswp__preloader--active when preloader is running -->
+	                <div class="pswp__preloader">
+	                    <div class="pswp__preloader__icn">
+	                      <div class="pswp__preloader__cut">
+	                        <div class="pswp__preloader__donut"></div>
+	                      </div>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+	                <div class="pswp__share-tooltip"></div> 
+	            </div>
+
+	            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+	            </button>
+
+	            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+	            </button>
+
+	            <div class="pswp__caption">
+	                <div class="pswp__caption__center"></div>
+	            </div>
+
+	          </div>
+
+	        </div>
 
 	</div>
-	
 
+	<div id='calendar'>
+	</div>
+
+	<div class="outershellGallery">
+	  {{#each groups2}}
+	  <div id="{{id}}" class="galleryscroll my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+	  	{{#each imageURL}}
+	    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+	      <a href="{{image}}" itemprop="contentUrl" data-size="1024x1024">
+	          <img src="{{image}}" itemprop="thumbnail" alt="Image description" />
+	      </a>                                          
+	    </figure>
+	    {{/each}}
+		</div>
+	  {{/each}}
+	</div>
+</div> <!-- end of body container -->
+	
+	{{> footer}}
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src='fullcalendar/lib/moment.min.js'></script>
 	<script src='fullcalendar/fullcalendar.js'></script>
 	<script src="js/dropdown.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
-
-	<script type="text/javascript"> 
-	    $(function($){
-	        var addToAll = true;
-	        var gallery = true;
-	        var titlePosition = 'inside';
-	        $(addToAll ? 'img' : 'img.fancybox').each(function(){
-	            var $this = $(this);
-	            var title = $this.attr('title');
-	            var src = $this.attr('data-big') || $this.attr('src');
-	            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-	            $this.wrap(a);
-	        });
-	        if (gallery)
-	            $('a.fancybox').attr('rel', 'fancyboxgallery');
-	        $('a.fancybox').fancybox({
-	            titlePosition: titlePosition
-	        });
-	    });
-	    $.noConflict();
-	</script>
-
-
+	<script src="js/photoswipe.js"></script> 
+	<script src="js/photoswipe-ui-default.min.js"></script> 
+	<script src="js/tester2.js"></script> 
+	
 	<script>
 		$(document).ready(function() {
+			// $(".my-gallery").hide();
 			{{#each groups2}}
 				$("#{{id}}").hide();
 			{{/each}}
@@ -97,14 +142,17 @@
 					right: 'month,agendaWeek,agendaDay'
 				},
 				defaultDate: defaultDateSetup,
-				defaultView: 'agendaDay',
+				defaultView: 'month',
 				contentHeight: 400,
 				eventClick: function(event) {
 					var eventID = "#"+event.id;
+						// $(".my-gallery").show();
 					$('.outershellGallery').children().not(eventID).hide();
 					var isHidden = $(eventID).is( ":hidden" );
 					if(isHidden){
 						$(eventID).show(); 
+
+						// openPhotoSwipe();
 						if ($(eventID).is(':visible')) {
 							$("html, body").animate({scrollTop: $(eventID).offset().top});
 						}
@@ -115,7 +163,7 @@
 		    	},
 		    	events: function (start, end, timezone, callback) {
 		            $.ajax({
-		                url: '/events.json',
+		                url: '/json/events.json',
 		                type: "GET",
 		                datatype: 'json',
 		                success: function (doc) {

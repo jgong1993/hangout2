@@ -1,4 +1,5 @@
 var profile = require("../profileimage.json");
+var eventTest = require("../eventTest.json");
 
 var multer = require('multer');
 var storage =   multer.diskStorage({
@@ -14,7 +15,7 @@ var upload = multer({ storage : storage}).single('userPhoto');
 
 
 exports.viewGallery = function(req, res){
-	res.render('gallery', profile);
+	res.render('gallery', eventTest);
 };
 
 exports.addPhoto = function(req,res){

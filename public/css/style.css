@@ -36,31 +36,6 @@ hr{
 	text-align: left;
 	padding: 9px;
 }
-.hoverBlue:hover p{
-	width: 90%;
-	height:100%;
-    opacity: 0.7;
-    background-color: blue;
-    text-align: left;
-    color:white;
-}
-.hoverBlack:hover p{
-	width: 90%;
-	height:100%;
-    opacity: 0.7;
-    background-color: black;
-    text-align:left;
-    color:white;
-}
-.hoverGreen:hover p{
-	width: 90%;
-	height:100%;
-    opacity: 0.7;
-    background-color: green;
-    text-align:left;
-    color:white;
-}
-
 .imagetitlebar{
 	display: block;
 }
@@ -71,5 +46,27 @@ hr{
 }
 
 .bodyContainer{
+	margin-top: 50px;
 	padding:20px;
+}
+
+.navbar{
+	height:40px;
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+	.navbar-header a{
+		font-size: 13px;
+		max-width: 90px;
+		padding: 0px;
+		padding-top: 5px;
+		padding-left: 10px;
+	}
+	#titleBar{
+		max-width: 110px;
+		font-size: 14px;
+		color: white;
+	}
+	.pull-right{
+		padding-right: 10px;
+	}
 }

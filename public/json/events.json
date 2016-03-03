@@ -5,8 +5,8 @@
 			"group": "Trash Squad",
 			"when": "January 21, 2016",
 			"whoisgoing": "Johnson and Kathy",
-			"start": "2016-02-21T16:00:00",
-			"end": "2016-02-21T17:00:00",
+			"start": "2016-03-01T16:00:00",
+			"end": "2016-03-01T17:00:00",
 			"imageURL": [
 				{"image":"images/lorempixel.jumbotron.jpeg"},
 				{"image":"images/icon.jpg"},
@@ -21,8 +21,8 @@
 			"group": "Trash Squad",
 			"when": "March 16, 2016",
 			"whoisgoing": "Kathy, Diana and Ivy",
-			"start": "2016-02-22T17:00:00",
-			"end": "2016-02-22T18:00:00",
+			"start": "2016-03-02T17:00:00",
+			"end": "2016-03-02T18:00:00",
 			"imageURL": [
 				{"image":"images/lorempixel.jumbotron.jpeg"},
 				{"image":"images/icon.jpg"},
