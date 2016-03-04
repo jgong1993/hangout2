@@ -1,4 +1,3 @@
-var profile = require("../profileimage.json");
 var eventTest = require("../eventTest.json");
 
 var multer = require('multer');
@@ -25,7 +24,10 @@ exports.addPhoto = function(req,res){
         }
         var origName = req.body.group;
         for(var i = 0; i < eventTest.groups2.length; i++) {
-  			  if(eventTest["groups2"][i].group == origName) {
+          console.log(origName);
+          console.log(eventTest["groups2"][i].title);
+          console.log("==");
+  			  if(eventTest["groups2"][i].title == origName) {
     				var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
     				eventTest["groups2"][i]["imageURL"].push(JSON.parse(newTarget));
     				break;

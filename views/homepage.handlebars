@@ -180,13 +180,13 @@
 		    	},
 		    	events: function (start, end, timezone, callback) {
 		            $.ajax({
-		                url: '/json/events.json',
+		                url: '/json/eventTest.json',
 		                type: "GET",
 		                datatype: 'json',
 		                success: function (doc) {
 		                    var events = [];
-		                    if ( doc != undefined && doc.length > 0) {
-		                        doc.forEach(function ( newEntry ) {
+		                    if ( doc.groups2 != undefined && doc.groups2.length > 0) {
+		                        doc.groups2.forEach(function ( newEntry ) {
 		                            events.push({
 		                            	id: newEntry.id,
 		                                title: newEntry.title,

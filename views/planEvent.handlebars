@@ -21,7 +21,7 @@
 	</div>
 	<div class="bodyContainer">
 		<form id="planEventForm" role="form" method="get" action="/planEventResult">
-			<h3>Suggest an event below</h3>
+			<h3>Plan an event below</h3>
 		    <div class="form-group">
 		      <label for="title">What do you wanna do:</label>
 		      <input type="text" class="form-control" id="title" placeholder="Example: go on a shopping spree" name="title">
@@ -30,8 +30,8 @@
 		    <div class="form-group">
 		      <label for="selectsquad">Choose your group:</label>
 		      <select name="group">
-		      	{{#each groups}}
-		      	<option value="{{name}}">{{name}}</option>
+		      	{{#each groups2}}
+		      	<option value="{{group}}">{{group}}</option>
 		      	{{/each}}
 		      </select>
 		    </div>
@@ -41,7 +41,7 @@
 		      <input type="date" class="form-control" id="plandate" placeholder="Example: February 29" name="when">
 		    </div>
 
-		    <input type="submit" id="submitBtn" class="btn btn-default" value="Suggest this event!"></input>
+		    <input type="submit" id="submitBtn" class="btn btn-default" value="Plan this event!"></input>
 		</form>
 	</div>
 

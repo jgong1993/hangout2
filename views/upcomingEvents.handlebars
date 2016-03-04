@@ -30,11 +30,11 @@
 		    <button id="suggestEvent" type="button" class="btn btn-default">Vote/Suggest Events</button>
 		  </div> -->
 		</div>
-		<a href="/planEvent" style="color:white;" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>		
+		<a href="/planEvent" style="margin-left: 12px; color:white;" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>		
 		<div class="">
 			<br>
 
-			{{#each events}}
+			{{#each groups2}}
 				
 				<div  class="col-md-12">
 					<h2>{{title}}</h2><h4>{{when}}</h4> <a href="viewEvent/{{title}}" class="btn btn-info col-md-3" style="color:white;">Details</a> 

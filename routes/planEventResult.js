@@ -1,14 +1,41 @@
 var data = require("../events.json");
 var suggested_events = require("../suggested_events.json");
+var eventTest = require("../eventTest.json");
 
 exports.view = function(req, res) {
 	res.render('/planEventResult', suggested_events);
 }
 exports.addNewEvent = function(req, res) {    
-		suggested_events['suggested_events'].push({
-			title: req.query.title,
-			group: req.query.group,
-			when: req.query.when
-		});
-		res.render('planEventResult', suggested_events);
+		// var origName = req.query.group;
+		 var orig = eventTest.groups2[eventTest.groups2.length-1].id;
+		 var neworig = orig.slice(1,orig.length);
+		 var newvar = 'e' + (parseInt(neworig) +1);
+		 
+		 var newWhen = req.query.when;
+		 if( newWhen == ''){
+		 	newWhen = 'No date, yo';
+		 }
+		 eventTest['groups2'].push({
+		 	id: newvar,
+		 	title: req.query.title,
+		 	group: req.query.group,
+		 	when: newWhen,
+		 	whoisgoing : 'You are.',
+		 	start: '',
+		 	end: '',
+		 	imageURL: []
+		 });
+		// for(var i = 0; i < eventTest.groups2.length; i++) {
+  // 			  if(eventTest["groups2"][i].group == origName) {
+  //   				//var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
+  //   				eventTest["groups2"][i]["imageURL"].push(JSON.parse(newTarget));
+  //   				break;
+  // 			  }
+  // 		  }
+		// suggested_events['suggested_events'].push({
+		// 	title: req.query.title,
+		// 	group: req.query.group,
+		// 	when: req.query.when
+		// });
+		res.render('planEventResult', eventTest);
  }

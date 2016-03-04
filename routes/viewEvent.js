@@ -1,21 +1,22 @@
 var data = require("../events.json");
+var eventTest = require("../eventTest.json");
 
 exports.viewThisEvent = function(req, res) {  
 	var title = req.params.title;  
-	// console.log("Event title is " + title);
+	
 	var date = "";
 	var members = "";
 	var group = "";
 	
 	// console.log("events var is " + data.events[0]);
 	var i;
-	var len = data.events.length;
+	var len = eventTest["groups2"].length;
 	for(i = 0; i < len; i++) {
-		// console.log(data.events[i]);
-		if(data.events[i].title == title) {
-			date    = data.events[i].when;
-			members = data.events[i].whoisgoing;
-			group   = data.events[i].group;
+		 if(eventTest["groups2"][i].title == title) {
+		 	console.log("got heem");
+			 date    = eventTest["groups2"][i].when;
+			 members = eventTest["groups2"][i].whoisgoing;
+			 group   = eventTest["groups2"][i].group;
 		}
 		else {
 			console.log("Couldn't initialize event fields from json!");
