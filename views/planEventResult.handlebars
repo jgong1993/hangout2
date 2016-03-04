@@ -20,20 +20,8 @@
 		{{> dropdownPartial}}
 	</div>
 	<div class="bodyContainer">
-		<h1>Congrats! New Event is planned and your squad can now vote!</h1>
-		<h3>What do you want to do now?</h3>
-		<h4>To go the main page click <a href="/homepage" class="btn btn-info" role="button">here</a></h4>
-		<h4>To see upcoming events click <a href="/upcomingEvents" class="btn btn-info" role="button">here</a></h4>
-		<br>
-		<h1>By the way, Here is the list of all suggested events</h1>
-		{{#each suggested_events}}
-			<div>
-				<h2>{{title}}</h2>
-				<h3>{{group}}</h3>
-				<h4>{{when}}</h4>
-				<hr>
-			</div>
-		{{/each}}
+		<h1>Success! Event's planned!</h1>
+		<a href="/upcomingEvents" class="btn btn-info" role="button"><h4 style="color:white;">To see all planned events click me</h4></a>
 	</div>
 
 	<script src="js/jquery.js"></script>
