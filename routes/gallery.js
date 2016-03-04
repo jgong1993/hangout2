@@ -4,7 +4,7 @@ var eventTest = require("../eventTest.json");
 var multer = require('multer');
 var storage =   multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, '../public/uploads');
+    callback(null, './public/uploads');
   },
   filename: function (req, file, callback) {
     callback(null, file.originalname);
@@ -21,7 +21,7 @@ exports.viewGallery = function(req, res){
 exports.addPhoto = function(req,res){
 	 upload(req,res,function(err) {
         if(err) {
-            return res.end("Error uploading file.");
+            return res.end("Error uploading file." + err);
         }
         var origName = req.body.group;
         for(var i = 0; i < eventTest.groups2.length; i++) {
