@@ -23,30 +23,27 @@
 
 	<div class="bodyContainer">
 		<div class="btn-group btn-group-justified" role="group" aria-label="...">
-		  <div class="btn-group" role="group">
+<!-- 		  <div class="btn-group" role="group">
 		    <button id="planEvent" type="button" class="btn btn-default">Plan Event</button>
 		  </div>
 		  <div class="btn-group" role="group">
 		    <button id="suggestEvent" type="button" class="btn btn-default">Vote/Suggest Events</button>
-		  </div>
+		  </div> -->
 		</div>
-				
-		<div class="leftDiv">
+		<a href="/planEvent" style="color:white;" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>		
+		<div class="">
 			<br>
-			<a href="/planEvent"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>
+
 			{{#each events}}
-				<a href="viewEvent/{{title}}">
-				<div>
-					<h2>{{title}}</h2>
-					<h4>{{when}}</h4>
-					<hr>
-					<h3>{{whoisgoing}}</h3>
+				
+				<div  class="col-md-12">
+					<h2>{{title}}</h2><h4>{{when}}</h4> <a href="viewEvent/{{title}}" class="btn btn-info col-md-3" style="color:white;">Details</a> 
 				</div>
-				</a>
+				
 			{{/each}}
 		</div>
 
-		<div class="rightDiv">
+<!-- 		<div class="rightDiv">
 			<table id="voteTable" class="table">
 			  <thead>
 		        <tr>
@@ -63,7 +60,7 @@
 			  {{/each}}
 			</tbody>
 			</table>
-		</div>
+		</div> -->
 	</div>
 
 	<script src="js/jquery.js"></script>
