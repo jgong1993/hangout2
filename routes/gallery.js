@@ -21,9 +21,9 @@ exports.viewGallery = function(req, res){
 exports.addPhoto = function(req,res){
 	 upload(req,res,function(err) {
         if(err) {
-            console.log("There appears to be an error: " + err);
             return res.end("Error uploading file.");
         }
+        console.log(req);
         var origName = req.body.group;
         for(var i = 0; i < eventTest.groups2.length; i++) {
   			  if(eventTest["groups2"][i].group == origName) {
