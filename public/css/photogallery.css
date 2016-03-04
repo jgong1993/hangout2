@@ -1,11 +1,15 @@
-/*  iPhone 6 */
-.miniNavBarForGallery table{
+.miniNavBarForGallery{
+    padding-top: 20px;
+}
+.miniNavBarForGallery table, .miniNavBarForGallery td{
     width: 100%;
 }
 .miniNavBarForGallery tr{
     height: 50px;
 }
-
+.miniNavBarForGallery td, .miniNavBarForGallery p{
+    text-align: left;
+}
 .thumbnail{
     min-height:100px;
 }
@@ -48,4 +52,9 @@
 .imageThumbnail{
     width: 200px;
     max-height: 130px;
+}
+#submenu{
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 10px;
 }

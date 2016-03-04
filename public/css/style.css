@@ -56,3 +56,6 @@ hr{
 .navList a{
 	font-size: 16px;
 }
+.navbar{
+	margin-bottom: 0px;
+}
