@@ -19,12 +19,12 @@ exports.viewGallery = function(req, res){
 };
 
 exports.addPhoto = function(req,res){
+          console.log(req);
+
 	 upload(req,res,function(err) {
         if(err) {
             return res.end("Error uploading file.");
-        }
-        console.log(req);
-        var origName = req.body.group;
+        }        var origName = req.body.group;
         for(var i = 0; i < eventTest.groups2.length; i++) {
   			  if(eventTest["groups2"][i].group == origName) {
     				var newTarget = "{\"image\" : \"./uploads/"+req.file.originalname+"\"}";
