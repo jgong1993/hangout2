@@ -1,4 +1,8 @@
 body {background-color: #FFF;}
+body a, a:hover{
+	text-decoration: none;
+	color: black;
+}
 .jumbotron {
 	background: url("../images/banner.jpg");
 	background-size: 100%;

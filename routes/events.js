@@ -1,5 +1,5 @@
 var data = require("../events.json");
-var eventTest = require("../eventTest.json");
+var eventTest = require("../eventTest.json"); 
 exports.viewEvents = function(req, res){
 	//console.log(data);
 	res.render('upcomingEvents', eventTest);

@@ -3,26 +3,16 @@
 <head>
 	<title>hangouts R us</title>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	{{> imports}}
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
- 	<link href="css/style.css" rel="stylesheet">
  	<link href="css/photogallery.css" rel="stylesheet">
-	<link href="css/dropdown.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/photoswipe.css"> 
 	<link rel="stylesheet" href="css/default-skin.css"> 
 	<link href="css/tester2.css" rel="stylesheet">
-	<link href="css/footer.css" rel="stylesheet">
 </head>
 
 <body>
 	<div class="container-fluid">
-<!-- 		<div class="jumbotron">
-			<h1>Your Photos</h1>
-			<p>What You've Uploaded</p>
-		</div> -->
 		{{> dropdownPartial}}
 	</div>
 
@@ -121,10 +111,6 @@
 					<td class="btn btn-default" name="{{group}}"><h1>{{title}}  &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></h1><p style="color:black;">on {{when}}</p>
 					</td>
 				</tr>
-<!-- 				<tr id="{{id}}"><td>
-					 <h3> {{when}} </h3>
-					</td>
-				</tr> -->
 			</table>
 
 			<div id="p{{id}}" class="pictureFrame">
@@ -146,8 +132,6 @@
 
 	{{> footer}}
 	<script src="js/jquery.js"></script> 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/dropdown.js"></script>
     <script src="js/photoswipe.js"></script> 
 	<script src="js/photoswipe-ui-default.min.js"></script> 
 	<script src="js/tester2.js"></script> 

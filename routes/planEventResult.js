@@ -1,10 +1,5 @@
-var data = require("../events.json");
-var suggested_events = require("../suggested_events.json");
 var eventTest = require("../eventTest.json");
 
-exports.view = function(req, res) {
-	res.render('/planEventResult', suggested_events);
-}
 exports.addNewEvent = function(req, res) {    
 		// var origName = req.query.group;
 		 var orig = eventTest.groups2[eventTest.groups2.length-1].id;

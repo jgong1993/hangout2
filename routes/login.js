@@ -1,5 +1,4 @@
 var login = require("../login.json");
-var images = require("../images.json");
 var eventTest = require("../eventTest.json");
 
 exports.register = function(req, res) {    
@@ -21,7 +20,7 @@ exports.register = function(req, res) { 
 
 	if(pw === pw2) {
 
-		res.render('homepage',images);
+		res.render('homepage',eventTest);
 
 		var obj = { "email": email, "password": pw }
 		login["login"].push(obj);
@@ -44,7 +43,7 @@ exports.login = function(req,res) {
 		if(login["login"][i].email == email) {
 
 			if(login["login"][i].password == pw) {
-				res.render('homepage',images);
+				res.render('homepage',eventTest);
 			}
 			else {
 				res.render('index', {"note": "Incorrect Password!"});

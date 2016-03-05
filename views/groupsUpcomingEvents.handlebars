@@ -3,20 +3,10 @@
 <html>
 <head>
 	<title>hangouts R us - Upcoming Events</title>	
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
-	<link href="/css/dropdown.css" rel="stylesheet">
+	{{> imports}}
 </head>
 <body>
 	<div class="container-fluid">
-<!-- 		<div class="jumbotron">
-			<h1>Upcoming Events</h1>
-		</div> -->
 		{{> dropdownPartial}}
 	</div>
 	<div class="bodyContainer">
@@ -32,10 +22,7 @@
 		</a>
 		{{/each}}
 	</div>
-
-	<script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-	<script src="/js/dropdown.js"></script>
+	{{> footer}}
 	{{> googleAnalytics}}
 </body>
 </html>

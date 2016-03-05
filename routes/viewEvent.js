@@ -1,4 +1,3 @@
-var data = require("../events.json");
 var eventTest = require("../eventTest.json");
 
 exports.viewThisEvent = function(req, res) {  
@@ -8,7 +7,6 @@ exports.viewThisEvent = function(req, res) { 
 	var members = "";
 	var group = "";
 	
-	// console.log("events var is " + data.events[0]);
 	var i;
 	var len = eventTest["groups2"].length;
 	for(i = 0; i < len; i++) {
