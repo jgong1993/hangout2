@@ -10,12 +10,19 @@ exports.addNewEvent = function(req, res) { 
 		 if( newWhen == ''){
 		 	newWhen = 'No date, yo';
 		 }
+		 var going = '';
+		 for(var i = 0; i < eventTest.groups2.length; i++) {
+		 	if(eventTest["groups2"][i].group == req.query.group) {
+		 		going = eventTest["groups2"][i].whoisgoing;
+		 		break;
+		 	}
+		 }
 		 eventTest['groups2'].push({
 		 	id: newvar,
 		 	title: req.query.title,
 		 	group: req.query.group,
 		 	when: newWhen,
-		 	whoisgoing : 'You are.',
+		 	whoisgoing : going,
 		 	start: '',
 		 	end: '',
 		 	imageURL: []
@@ -32,5 +39,6 @@ exports.addNewEvent = function(req, res) { 
 		// 	group: req.query.group,
 		// 	when: req.query.when
 		// });
-		res.render('planEventResult', eventTest);
+		//res.render('upcomingEvents',  {"note": "Group Successfully Added!", eventTest});
+		res.render('upcomingEvents', eventTest);
  }
