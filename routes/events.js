@@ -1,7 +1,6 @@
-var data = require("../events.json");
+//var data = require("../events.json");
 var eventTest = require("../eventTest.json"); 
 exports.viewEvents = function(req, res){
-	//console.log(data);
 	res.render('upcomingEvents', eventTest);
 };
 
@@ -17,14 +16,14 @@ exports.viewGroupsEvents = function(req, res){
 	var event_detail = {};
 	var groupsEvents;
 
-	var len = data.events.length;
+	var len = eventTest.groups2.length;
 	var i = 0;
 	for( ; i < len; i++) {
-		if(data.events[i].group == groupName) {
-			title   = data.events[i].title;
-			date    = data.events[i].when;
-			members = data.events[i].whoisgoing;
-			group   = data.events[i].group;
+		if(eventTest.groups2[i].group == groupName) {
+			title   = eventTest.groups2[i].title;
+			date    = eventTest.groups2[i].when;
+			members = eventTest.groups2[i].whoisgoing;
+			group   = eventTest.groups2[i].group;
 
 			event_detail = {
 				"title": title, 

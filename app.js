@@ -60,8 +60,6 @@ app.get('/viewEvent/:title', viewEvent.viewThisEvent);
 app.get('/viewGroups', groups.viewGroups);
 app.get('/viewGroups/:groupName', indivGroup.leaveGroup);
 
-
-
 app.post('/pushImage', gallery.addPhoto);
 
 http.createServer(app).listen(app.get('port'), function(){
