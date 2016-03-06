@@ -78,7 +78,7 @@ exports.leaveGroup = function(req,res) {
 		}
 		else if(groups["groups"][i].name == group) {
 			delete groups["groups"][i];
-			groups["groups"].splice(i,i)
+			groups["groups"].splice(i,1);
 			break;
 		}
 	}

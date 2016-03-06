@@ -43,7 +43,8 @@ exports.login = function(req,res) {
 		if(login["login"][i].email == email) {
 
 			if(login["login"][i].password == pw) {
-				res.render('homepage',eventTest);
+				// res.render('homepage',eventTest);
+				res.redirect('homepage');
 			}
 			else {
 				res.render('index', {"note": "Incorrect Password!"});
@@ -56,6 +57,6 @@ exports.login = function(req,res) {
 
 };
 
-exports.login = function(req,res) {
-	res.render('homepage',eventTest);
-};
+// exports.login = function(req,res) {
+// 	res.render('homepage',eventTest);
+// };
