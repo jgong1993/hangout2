@@ -19,7 +19,6 @@ exports.addNewEvent = function(req, res) { 
 		 		break;
 		 	}
 		 }
-		 console.log("Date is: " + newWhen);
 		 eventTest['groups2'].push({
 		 	id: newvar,
 		 	title: req.query.title,
@@ -28,9 +27,7 @@ exports.addNewEvent = function(req, res) { 
 		 	whoisgoing : going,
 		 	start: newStart,
 		 	end: newEnd,
-		 	imageURL: t
+		 	imageURL: []
 		 });
-		console.log("new thing: " + JSON.stringify(eventTest['groups2'][5]));
-		console.log("new thing: " + JSON.stringify(eventTest['groups2'][6]));
 		res.render('upcomingEvents', eventTest);
  }

@@ -112,12 +112,6 @@
 	<script src="js/photoswipe-ui-default.min.js"></script> 
 	<script src="js/tester2.js"></script> 
 	<script src="js/introHCI.js"></script>
-	<script> 
-		$('.navbarstyle').click(function(){
-			console.log("clicky");
-			$('#calendar').fullCalendar('refetchEvents');
-		});
-	</script>
 	<script>
 		$(document).ready(function(event) {
 			// $(".my-gallery").hide();
@@ -144,8 +138,6 @@
 					var isHidden = $(eventID).is( ":hidden" );
 					if(isHidden){
 						$(eventID).show(); 
-
-						// openPhotoSwipe();
 						if ($(eventID).is(':visible')) {
 							$("html, body").animate({scrollTop: $(eventID).offset().top});
 						}
@@ -161,19 +153,27 @@
 		                datatype: 'json',
 		                success: function (doc) {
 		                    var events = [];
-		                    if ( doc.groups2 != undefined && doc.groups2.length > 0) {
-		                    	console.log(JSON.stringify(doc.groups2[5]));
-		                    	console.log(JSON.stringify(doc.groups2[6]));
-		                        doc.groups2.forEach(function ( newEntry ) {
-		                            events.push({
-		                            	id: newEntry.id,
-		                                title: newEntry.title,
-		                                start: newEntry.start,
-		                                end: newEntry.end,
-		                            });
+		                    {{#each groups2}}
+		                    	events.push({
+	                            	id: "{{id}}",
+	                                title: "{{title}}",
+	                                start: "{{start}}",
+	                                end: "{{end}}"
+	                            });
+		                    {{/each}}
+		                    // if ( doc.groups2 != undefined && doc.groups2.length > 0) {
+		                    // 	console.log(JSON.stringify(doc.groups2[5]));
+		                    // 	console.log(JSON.stringify(doc.groups2[6]));
+		                    //     doc.groups2.forEach(function ( newEntry ) {
+		                    //         events.push({
+		                    //         	id: newEntry.id,
+		                    //             title: newEntry.title,
+		                    //             start: newEntry.start,
+		                    //             end: newEntry.end,
+		                    //         });
 
-		                        });
-		                    }
+		                    //     });
+		                    // }
 		                    callback(events);
 		                },error: function (err) {
 		                    alert('Error in fetching data' + err);
