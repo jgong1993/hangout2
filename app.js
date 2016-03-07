@@ -63,6 +63,7 @@ app.get('/viewGroups', groups.viewGroups);
 app.get('/viewGroups/:groupName', indivGroup.leaveGroup);
 
 app.post('/pushImage', gallery.addPhoto);
+app.post('/pushImage2', gallery.addPhoto2);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

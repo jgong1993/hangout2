@@ -101,4 +101,36 @@ name {
     text-shadow: 1px 1px black;
 }
 
+.onehunnit {
+    width: 100%;
+    padding: 0px;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media only screen and (min-width: 600px){
+    .onehunnit {
+        width: 70%;
+        margin: 0 auto; 
+        text-align: center;
+    }
+    .optbtn {
+         width: 55%;
+    }
+}
+
+@media only screen and (min-width: 991px){
+    .onehunnit {
+        width: 70%;
+        margin: 0 auto; 
+        text-align: center;
+        float: none;
+    }
+    .optbtn {
+         width: 55%;
+    }
+}
 
