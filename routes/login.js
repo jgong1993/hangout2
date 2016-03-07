@@ -1,5 +1,5 @@
-var login = require("../login.json");
-var eventTest = require("../eventTest.json");
+var login = require("../public/json/login.json");
+var eventTest = require("../public/json/eventTest.json");
 
 exports.register = function(req, res) {    
 

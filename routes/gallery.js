@@ -1,4 +1,4 @@
-var eventTest = require("../eventTest.json");
+var eventTest = require("../public/json/eventTest.json");
 
 var multer = require('multer');
 var storage =   multer.diskStorage({
