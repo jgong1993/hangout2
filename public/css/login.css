@@ -1,18 +1,21 @@
 .header {
-     margin: 0;
-     color: #333;
-     text-align: center;
-     padding: 2.5em 2em 0;
-     border-bottom: 1px solid #eee;
- }
+    color: #ffffff;
+    margin: 0;
+    margin-top: 15%;
+    padding: 2.5em 2em 0;
+    text-align: center;
+}
+
 .header h1 {
     margin: 0.2em 0;
     font-size: 3em;
-    font-weight: 300;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
 }
- .header h2 {
-    font-weight: 300;
-    color: #ccc;
+
+.header h2 {
+    font-size: 1.5em;
+    font-weight: 400;
     padding: 0;
     margin-top: 0;
 }
@@ -21,7 +24,81 @@
 	text-align: center;
 }
 
+.col-md-6 h2{
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+}
+
 input[type=email], input[type=password] {
 	margin: auto;
 	width: 100%; 
 }
+
+body {
+    background-image: url("../images/1/6399045_6399045-R5-001-00.jpg");
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+.optbtn {
+    background-color: #89E2E8;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 20px auto;
+    padding: 15px 0px;
+    width: 80%;
+}
+
+.inputbtn {
+    background-color: #89E2E8;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 20px auto;
+    padding: 15px 0px;
+    width: 100%;
+}
+
+.regbtn {
+    
+}
+
+.loginbtn {
+    background-color: #ffffff;
+    opacity: 0.7;
+}
+
+name {
+    color: black;
+}
+
+.login2 {
+    background-color: #ffffff;
+    color: black;
+    opacity: 0.9;
+}
+
+#note {
+    color: #F72F54;
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    opacity: 0.9;
+    padding: 1em 0;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    width: 70%;
+}
+
+#remme {
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+}
+
+

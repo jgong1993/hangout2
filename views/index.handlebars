@@ -11,7 +11,7 @@
     <div id="main">
         <div class="header">
             <h1>Hangouts R Us</h1>
-            <h2>You have no idea what to do!</h2>
+            <h2>Need help making plans? We know the struggle.</h2>
         </div>
 
 		<style scoped>
@@ -19,53 +19,78 @@
 	        .button-small {font-size: 85%;}
 	    </style>
 
-	    <h3 id="note" style="color:blue; text-align:center;">{{note}}</h3>
+	    <h3 id="note">{{note}}</h3>
 
-		 <div class="row">
-		        	<div class="center">
-					    <div class="col-md-6">
-							<h2> Login </h2>
-					        <form method="get" action = "/homepage2" class="pure-form pure-form-stacked">
+		<div class="row">
+
+			<button class="optbtn regbtn">Register</button>
+
+					<div class="center register">
+						<div class="col-md-6">
+					        <form method="get" action ="/register" class="pure-form pure-form-stacked">
 							    <fieldset>
-							        <label for="email">Email</label>
-							        <input required="" id="email" type="email" name="email" placeholder="Email">
+							    	<div>
+								        <input required="" name ="emailSign" id="emailSign" type="email" placeholder="Email">
 
-							        <label for="password">Password</label>
-							        <input required="" id="password" type="password" name="password" placeholder="Password">
+								        <input required="" name="passwordSign" id="passwordSign" type="password" placeholder="Password">
 
-							        <label for="remember" class="pure-checkbox">
-							        <input id="remember" type="checkbox"> Remember me
-							        </label>
-
-							        <button type="submit" class="pure-button pure-button-primary">Login</button></br></br>
+								        <input required="" name="passwordSign2" id="passwordSign2" type="password" placeholder="Confirm Password">
+							        </div>
+							        <div style="padding-top:5px">
+							       	 	<button type="submit" class="inputbtn">Register</button>
+							    	</div>
 							    </fieldset>
 							</form>
 						</div>
 					</div>
-					<div class="center">
-						<div class="col-md-6">
-							<h2> Sign Up </h2>
-					        <form method="get" action ="/register" class="pure-form pure-form-stacked">
+
+			<button class="optbtn loginbtn"><name>Login</name></button>
+
+		        	<div class="center login">
+					    <div class="col-md-6">
+					        <form method="get" action = "/homepage2" class="pure-form pure-form-stacked">
 							    <fieldset>
-							    	<div>
-								        <label for="email">Email</label>
-								        <input required="" name ="emailSign" id="emailSign" type="email" placeholder="Email">
+							        <input required="" id="email" type="email" name="email" placeholder="Email">
 
-								        <label for="password">Password</label>
-								        <input required="" name = "passwordSign" id="passwordSign" type="password" placeholder="Password">
+							        <input required="" id="password" type="password" name="password" placeholder="Password">
 
-								        <label for="password">Password (again) </label>
-								        <input required="" name = "passwordSign2" id="password2Sign" type="password" placeholder="Password">
-							        </div>
-							        <div style="padding-top:5px">
-							       	 	<button type="submit" class="pure-button pure-button-primary">Sign up</button>
-							    	</div>
+							        <label id="remme" for="remember" class="pure-checkbox">
+							        <input id="remember" type="checkbox"> Remember Me
+							        </label>
+
+							        <button type="submit" class="inputbtn login2">Login</button></br></br>
 							    </fieldset>
 							</form>
 						</div>
 					</div>
 		</div>
     </div> <!-- End of Main -->
+
+    <script>
+
+    	$(document).ready(function() {
+			$(".login").hide();
+			$(".register").hide();
+		});
+
+		$(".loginbtn").click(function(e) {
+	        e.preventDefault();
+	        $(".login").show();
+	        $(".loginbtn").hide();
+	        $(".register").hide();
+	        $(".regbtn").show();
+	    });
+
+	    $(".regbtn").click(function(e) {
+	        e.preventDefault();
+	        $(".register").show();
+	        $(".regbtn").hide();
+	        $(".login").hide();
+	        $(".loginbtn").show();
+	    });
+
+
+    </script>
 </body>
 </html>
 

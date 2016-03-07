@@ -5,31 +5,35 @@ exports.register = function(req, res) { 
 
 	var email = req.query.emailSign;
 	var pw = req.query.passwordSign;
-	var pw2 = req.query.password2Sign;
+	var pw2 = req.query.passwordSign2;
 	console.log("email: " +email);
 	console.log("pw: " +pw);
 	console.log("pw2: " +pw2);
+	var flag = true;
 
-	for(var i = 0; i < login.login.length; i++) {
+	for(var i = 0; i < login["login"].length; i++) {
 		if(login["login"][i].email == email) {
 			console.log("GOES HERE");
-			res.render('index', {"note": "Email already exists!"});
+			res.render('index', {"note": "Registering failed. Email already exists!"});
+			flag = false;
 			break;
 		}
 	}
 
-	if(pw === pw2) {
+	if(flag) {
+		if(pw == pw2) {
 
-		res.render('homepage',eventTest);
+			res.render('homepage');
+			var obj = { "email": email, "password": pw }
+			login["login"].push(obj);
+			console.log(login["login"]);
+		}
+		else {
+			res.render('index', {"note": "Registering failed. Passwords don't match!"});
+		}
+	}
 
-		var obj = { "email": email, "password": pw }
-		login["login"].push(obj);
-		console.log(login);
-	}
-	else {
-		res.render('index', {"note": "Passwords don't match!"});
-	}
-	
+	flag = true;
  };
 
 exports.login = function(req,res) {
@@ -39,7 +43,7 @@ exports.login = function(req,res) {
 	console.log("email: " +email);
 	console.log("pw: " +pw);
 
-	for(var i = 0; i < login.login.length; i++) {
+	for(var i = 0; i < login["login"].length; i++) {
 		if(login["login"][i].email == email) {
 
 			if(login["login"][i].password == pw) {
@@ -47,16 +51,13 @@ exports.login = function(req,res) {
 				res.redirect('homepage');
 			}
 			else {
-				res.render('index', {"note": "Incorrect Password!"});
+				res.render('index', {"note": "Login failed. Incorrect Password!"});
 			}
 		}
 		else {
-			res.render('index', {"note": "Email Not Found!"});
+			res.render('index', {"note": "Loging failed. Email Not Found!"});
 		}
 	}
 
 };
 
-// exports.login = function(req,res) {
-// 	res.render('homepage',eventTest);
-// };
