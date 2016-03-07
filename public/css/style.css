@@ -1,5 +1,5 @@
 body {background-color: #FFF;}
-body a, a:hover{
+body a, a:hover, a:link, a:visited, a:active{
 	text-decoration: none;
 	color: black;
 }

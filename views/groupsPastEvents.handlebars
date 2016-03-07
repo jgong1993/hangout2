@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>hangouts R us - Upcoming Events</title>	
+	{{> imports}}
+</head>
+<body>
+	<div class="container-fluid">
+		{{> dropdownPartial}}
+	</div>
+	<div class="bodyContainer">
+		<a href="/planEvent"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Plan a New Event!</a>
+		{{#each groupsEvents}}
+			<a href="/viewEvent/{{title}}">
+			<div>
+				<h2>You're doing -- {{title}}</h2>
+				<h4>This day: {{when}}</h4>
+				<h3>With these guys: {{members}}</h3>
+				<hr>
+			</div>
+		</a>
+		{{/each}}
+	</div>
+	{{> footer}}
+	{{> googleAnalytics}}
+</body>
+</html>

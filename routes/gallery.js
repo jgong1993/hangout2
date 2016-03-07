@@ -16,6 +16,44 @@ var upload = multer({ storage : storage}).single('userPhoto');
 exports.viewGallery = function(req, res){
 	res.render('gallery', eventTest);
 };
+exports.viewGroupGallery = function(req, res){
+  var groupName = req.params.groupName; 
+  var date = "";
+  var imageURLArr = [];
+  
+  var events_array = [];
+  var event_detail = {};
+  var indivGallery;
+
+  var len = eventTest.groups2.length;
+  var i = 0;
+  for( ; i < len; i++) {
+    if(eventTest.groups2[i].group == groupName) {
+      title   = eventTest.groups2[i].title;
+      date    = eventTest.groups2[i].when;
+      for(var j = 0; j < eventTest.groups2[i].imageURL.length; j++){
+        imageURLArr.push({image : "/"+eventTest.groups2[i].imageURL[j].image});
+      }
+      
+      event_detail = {
+        "title": eventTest.groups2[i].title, 
+        'when': eventTest.groups2[i].when, 
+        'imageURL': imageURLArr,
+        'id': eventTest.groups2[i].id 
+      }
+      console.log(event_detail);
+
+      events_array.push(event_detail); 
+      indivGallery = {'indivGallery': events_array};
+      console.log(indivGallery);
+      imageURLArr = [];
+    }
+    else {
+      console.log("Couldn't initialize event fields from json!");
+    }
+  } 
+  res.render('groupGallery', indivGallery);
+};
 
 exports.addPhoto = function(req,res){
 	 upload(req,res,function(err) {
