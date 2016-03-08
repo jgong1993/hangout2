@@ -75,7 +75,7 @@ exports.viewGroupsPastEvents = function(req, res){
 			}
 
 			var d1 = new Date(); // Current time
-			var d2 = new Date(date); // Event time
+			var d2 = new Date(eventTest.groups2[i].start); // Event time
 			if(d1.getTime() > d2.getTime()){
 				events_array.push(event_detail); 
 				groupsEvents = {'groupsEvents': events_array};
