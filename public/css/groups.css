@@ -23,7 +23,6 @@ h4 {
 
 .listview > li {
 	border-top: 3px solid #2F6E73;
-	font-family: Century Gothic, sans-serif;
 	list-style-type: none;
 	margin-left: 0px;
 	text-decoration: none;
@@ -39,7 +38,11 @@ ul.listview > li:first-child {
 
 .listview > li a{
 	border: none;
+	color: #363535;
 	display: block;
+	font-family: Century Gothic, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
 	padding: 20px 40px;
 }
 
@@ -95,6 +98,7 @@ ul.listview > li:first-child {
 	margin: 0px 10px;
 	padding: 10px;
 	padding-right: 20px;
+	padding-left: 22px;
 	text-decoration: none;
 	position:relative;
 	display: inline;

@@ -14,7 +14,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  background-color: #f5f5f5;
+  background-color: #555;
 }
 
 
@@ -35,5 +35,7 @@ body {
 }
 
 .footer p{
-  text-align: left;
+  color: #E8E8E8;
+  font-size: 14px;
+  font-weight: 700;
 }
