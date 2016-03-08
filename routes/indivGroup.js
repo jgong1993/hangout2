@@ -51,8 +51,18 @@ exports.editGroup = function(req, res){
 	for(var i = 0; i < groups.groups.length; i++) {
 		if(groups["groups"][i].name == origName) {
 			groups["groups"][i].members.push(friends);
+
+			console.log("name length: " + name.length);
+			if(name.length  == 0) {
+				name = groups["groups"][i].name;
+			}
 			groups["groups"][i].name = name;
+
+			if(description == 0) {
+				description = groups["groups"][i].description;
+			}
 			groups["groups"][i].description = description;
+
 			break;
 		}
 	}

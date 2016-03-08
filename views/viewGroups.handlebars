@@ -13,23 +13,31 @@
 		{{> dropdownPartial}}
 	</div>
 	<div class="bodyContainer">
-		<a href="#showGroup" id="showGroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			New Group</a> <br>
+		<h3>Your Groups <name id="note">{{note}}</name></h3>
+		
+		<div>
+			<ul class="listview">
+				{{#each groups}}
+				<li><a href="/group/{{name}}">{{name}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
+				{{/each}}
+			</ul>				
+		</div>
 
-		<h3 id="note" style="color:blue; text-align:center;">{{note}}</h3>
-				
+		<a href="#showGroup" id="showGroup" class="optgroup"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Group </a>
+
+
 		<!-- COLLAPSABLE FORM FOR NEW GROUP -->
-		<div id="submenu" style="margin-bottom: 20px;">
+		<div id="submenu" style="margin-top: 20px;">
 			<form role="form" method="get" action="/addGroup">
 			  <div class="form-group">
 			     <label for="friends">Choose Your Friends</label><br> 
-			     <div> <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></div>	
+			     <div> <span class="glyphicon glyphicon-chevron-up" style="margin-left:5px;"></span></div>	
 			     <div class="scrollable">
 				  {{#each friends}}
-				  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;">{{name}}<br>
+				  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;"> {{name}}<br>
 				  {{/each}}
 				</div>
-				<div> <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></div>	
+				<div> <span class="glyphicon glyphicon-chevron-down" style="margin-left:5px;"></span></div>	
 			  </div>
 			  <div class="form-group">
 			    <label for="name">Choose A Group Name</label>
@@ -39,17 +47,11 @@
 			    <label for="description">Description (Optional)</label>
 			    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
 			  </div>
-			  <input type="submit" id="submitBtn" class="btn btn-default" value="Add New Group"></input>
+			  <input type="submit" id="submitBtn" class="btn optbtn" value="Add New Group"></input>
+			  <button class="btn cancel">Cancel</button>
 			</form>
 		</div>
 		
-		<div>
-			<ul class="listview">
-				{{#each groups}}
-				<li><a href="/group/{{name}}">{{name}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="float:right;"></a></li>
-				{{/each}}
-			</ul>				
-		</div>
 	</div>
 	{{> footer}}
 	<script src="js/introHCI.js"></script>
@@ -57,6 +59,11 @@
 		$(document).ready(function() {
 			$("#submenu").hide();
 		});
+
+		$(".cancel").click(function(e) {
+ 	        e.preventDefault();
+ 	        $("#submenu").hide();
+ 	    });
 
 		$("#showGroup").click(function(e) {
 	        e.preventDefault();
