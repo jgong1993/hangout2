@@ -189,8 +189,8 @@ ul.listview > li:first-child {
     font-size: 14px;
     font-weight: 900;
     margin: 10px auto;
-    padding: 10px 0px;
-    width: 40%;
+    padding: 5px 0px;
+    width: 60%;
 }
 
 .cancel {
@@ -201,8 +201,8 @@ ul.listview > li:first-child {
     font-size: 14px;
     font-weight: 900;
     margin: 10px auto;
-    padding: 10px 0px;
-    width: 40%;
+    padding: 5px 0px;
+    width: 60%;
 }
 
 
