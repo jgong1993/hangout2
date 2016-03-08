@@ -32,7 +32,7 @@ exports.viewGroupsEvents = function(req, res){
 			}
 
 			var d1 = new Date(); // Current time
-			var d2 = new Date(date); // Event time
+			var d2 = new Date(eventTest.groups2[i].when); // Event time
 			console.log("currently: " + d1.getTime() +   "    -- eventime: " + d2.getTime());
 			if(d1.getTime() < d2.getTime()){
 				events_array.push(event_detail); 
