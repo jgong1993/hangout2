@@ -12,11 +12,11 @@
 
 	<div class="bodyContainer">
 		{{note}}
-		<a href="/planEvent" style="margin-left: 12px; color:white;" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>		
+		<a href="/planEvent" style="margin: auto; color:white;" class="btn planbtn"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Plan a New Event!</a>		
 		{{#each groups2}}
 			<div class="col-md-12">
 				<h2>{{title}}</h2><h4>{{when}}</h4> 
-				<a href="viewEvent/{{title}}" class="btn btn-info col-md-3" style="color:white;">Details</a> 
+				<a href="viewEvent/{{title}}" class="btn detailbtn col-md-3" style="color:white;">Details</a> 
 			</div>
 		{{/each}}
 		

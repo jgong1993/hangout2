@@ -1,3 +1,11 @@
+h2 {
+	font-family: Century Gothic, sans-serif;
+	font-weight: 600;
+}
+h4 {
+	font-family: Century Gothic, sans-serif;
+}
+
 .scrollable {
 	background-color: #f1f1f1;
 	height:100px;
@@ -6,7 +14,7 @@
 
 .listview {
 	background-color: #D3DFE8;
-	border: 3px solid #2F6E73;
+	border: 10px solid #2F6E73;
 	border-radius: 5px;
 	list-style-type: none;
 	margin-top: 20px;
@@ -15,6 +23,7 @@
 
 .listview > li {
 	border-top: 3px solid #2F6E73;
+	font-family: Century Gothic, sans-serif;
 	list-style-type: none;
 	margin-left: 0px;
 	text-decoration: none;
@@ -36,14 +45,14 @@ ul.listview > li:first-child {
 
 #submenu {
 	background-color: #D3F0F2;
-	border: 1px solid #555;
+	border: 5px solid #555;
 	border-radius: 5px;
 	padding: 10px;
 	position: relative;
 }
 
 .submenu {
-	border-top: 1px solid #555;
+	border-top: 5px solid #555;
 	display: none;
 	position: relative;
 }

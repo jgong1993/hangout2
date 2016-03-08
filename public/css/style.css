@@ -1,4 +1,7 @@
-body {background-color: #FFF;}
+body {
+	background-color: #FFF;
+	font-family: Century Gothic, sans-serif;
+}
 body a, a:hover, a:link, a:visited, a:active{
 	text-decoration: none;
 	color: black;
@@ -44,8 +47,6 @@ hr{
 	display: block;
 }
 
-
-
 .bodyContainer{
 	padding:20px;
 }
@@ -53,8 +54,9 @@ hr{
 #navTitle{
 	border: none;
 	color: white;
-	font-size: 24px;
-	font-weight: 900;
+	font-family: Century Gothic, sans-serif;
+	font-size: 26px;
+	font-weight: 700;
 }
 
 .navList > li{
@@ -72,3 +74,45 @@ hr{
 .container-fluid {
 	background-color: #89E2E8;
 }
+
+.planbtn {
+    background-color: #2F6E73;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 10px auto;
+    padding: 10px 0px;
+    width: 40%;
+}
+
+.detailbtn {
+    background-color: #74C8CF;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 10px 0px;
+    width: 30%;
+}
+
+.col-md-12{
+	border: 5px solid #383838;
+	margin: 10px;
+	padding: 10px;
+}
+
+.col-md-12 h2, h4 {
+	font-family: Century Gothic, sans-serif;
+	font-weight: 600;
+}
+
+
+
+
+
+
+
+
