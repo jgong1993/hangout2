@@ -1,9 +1,26 @@
-h2 {
+#topinfo > h2 {
 	font-family: Century Gothic, sans-serif;
-	font-weight: 600;
+	font-weight: 700;
+	font-size: 36px;
+	padding-top: 30px;
+	text-shadow: 2px 2px 4px #000000;
 }
+
 h4 {
+	color: white;
 	font-family: Century Gothic, sans-serif;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.viewGroups > h2 {
+	display: block;
+	font-family: Century Gothic, sans-serif;
+	font-weight: 700;
+	font-size: 28px;
+	margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px 4px #fff;
+    width: 100%;
 }
 
 .scrollable {
@@ -131,9 +148,14 @@ ul.listview > li:first-child {
 }
 
 #topinfo {
+	background-image: url("../images/2/1679041_1679041-R3-025-11.jpg");
+	background-size: cover;
+	background-position: center center; 
 	display: block;
+	height: 150px;
 	margin: auto;
     text-align: center;
+    width: 100%;
 }
 
 .optgroup {
@@ -143,6 +165,22 @@ ul.listview > li:first-child {
 	right: 3%;
 }
 
+.bodyContainer > a.onwhitebtn {
+	color: #363535;
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 10px;
+	text-shadow: 2px 2px 4px #fff;
+}
+
+.bodyContainer > a.ondarkbtn {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 10px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
 .optbtn {
     background-color: #2F6E73;
     border: none;
@@ -150,8 +188,8 @@ ul.listview > li:first-child {
     display: block;
     font-size: 14px;
     font-weight: 900;
-    margin: 20px auto;
-    padding: 15px 0px;
+    margin: 10px auto;
+    padding: 10px 0px;
     width: 40%;
 }
 
@@ -162,8 +200,8 @@ ul.listview > li:first-child {
     display: block;
     font-size: 14px;
     font-weight: 900;
-    margin: 20px auto;
-    padding: 15px 0px;
+    margin: 10px auto;
+    padding: 10px 0px;
     width: 40%;
 }
 

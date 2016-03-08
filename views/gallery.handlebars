@@ -108,8 +108,11 @@
 			{{#each groups2}}
 			<table>
 				<tr id="{{id}}" class="nameFrame">
-					<td class="btn storybtn" name="{{group}}"><h1>{{title}}  &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right; margin-right:10px;"></span></h1><p style="color:black;">on {{when}}</p>
+					<td class="btn storybtn" id="image{{id}}" name="{{group}}"><h1>{{title}}  &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right; margin-right:10px;"></span></h1><p>on {{when}}</p>
 					</td>
+					<script>
+						$("#image{{id}}").css('background-image', "url(../{{imageURL.0.image}})");
+					</script>
 				</tr>
 			</table>
 
@@ -140,6 +143,11 @@
 		$(document).ready(function() {
 			{{#each groups2}}
 				$("#p{{id}}").hide();
+				/*
+				{{#each imageURL}}
+					$(".storybtn").css('background-image', "url(../{{image}})");
+				{{/each}}
+				*/
 			{{/each}}
 			$("#submenu").hide();
 		});
