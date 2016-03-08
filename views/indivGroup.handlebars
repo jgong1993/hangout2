@@ -5,6 +5,7 @@
 	<title>hangouts R us - This Group</title>	
 	{{> imports}}
 	<link href="/css/groups.css" rel="stylesheet"> 
+	<link href="/css/overall.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container-fluid">
@@ -12,9 +13,10 @@
 	</div>
 
 	<div class="bodyContainer">
-		<a href="#edit-group" id="edit-group"><span class="glyphicon glyphicon-edit"></span>Edit Group Info</a>
+		<a href="#edit-group" id="edit-group" class="optgroup"><span class="glyphicon glyphicon-edit"></span> Edit Info</a>
+
 		<!-- COLLAPSABLE FORM FOR EDITING GROUP -->
-		<div id="submenu" style="margin-bottom: 20px;">
+		<div id="submenu">
 			<form role="form" method="get" action="/editGroup">
 			  <div class="form-group">
 			    <label for="friends">Add Friend(s) To {{groupName}}</label><br> 
@@ -33,8 +35,16 @@
 			    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
 			  </div>
 			  <input type="submit" id="submitBtn" class="btn btn-default" name="origName" value="Update {{groupName}}"></input>
+			  <button class="btn btn-default cancel">Cancel</button>
 			</form>
 		</div>
+
+
+		<div id="topinfo">
+			<h2>{{groupName}}</h2>
+			<h4>{{description}}</h4>
+		</div>
+
 		<div>
 			<ul class="listview">
 				<li class="submenu"><a href="#">Members<span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float:right;"></a></li>
@@ -74,6 +84,10 @@
 	    $("#keep").click(function(e) {
 	        e.preventDefault();
 	        $(".cd-popup").removeClass("is-visible");
+	    });
+	    $(".cancel").click(function(e) {
+	        e.preventDefault();
+	        $("#submenu").hide();
 	    });
 	    
 		$('li.submenu')
