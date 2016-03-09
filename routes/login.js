@@ -23,7 +23,7 @@ exports.register = function(req, res) { 
 	if(flag) {
 		if(pw == pw2) {
 
-			res.render('homepage');
+			res.render('homepage', eventTest);
 			var obj = { "email": email, "password": pw }
 			login["login"].push(obj);
 			console.log(login["login"]);
