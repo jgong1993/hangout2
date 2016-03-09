@@ -113,6 +113,15 @@ name {
     width: 80%;
 }
 
+.register {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.login {
+
+}
+
 @media only screen and (min-width: 600px){
     .onehunnit {
         width: 70%;
