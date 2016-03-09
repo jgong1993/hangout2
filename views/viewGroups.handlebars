@@ -23,33 +23,33 @@
 			</ul>				
 		</div>
 
-		<a href="#showGroup" id="showGroup" class="optgroup onwhitebtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Group </a>
-
-
-		<!-- COLLAPSABLE FORM FOR NEW GROUP -->
-		<div id="submenu" style="margin-top: 20px;">
-			<form role="form" method="get" action="/addGroup">
-			  <div class="form-group">
-			     <label for="friends">Choose Your Friends</label><br> 
-			     <div> <span class="glyphicon glyphicon-chevron-up" style="margin-left:5px;"></span></div>	
-			     <div class="scrollable">
-				  {{#each friends}}
-				  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;"> {{name}}<br>
-				  {{/each}}
-				</div>
-				<div> <span class="glyphicon glyphicon-chevron-down" style="margin-left:5px;"></span></div>	
-			  </div>
-			  <div class="form-group">
-			    <label for="name">Choose A Group Name</label>
-			    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
-			  </div>
-			  <div class="form-group">
-			    <label for="description">Description (Optional)</label>
-			    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
-			  </div>
-			  <input type="submit" id="submitBtn" class="btn optbtn" value="Add New Group"></input>
-			  <button class="btn cancel">Cancel</button>
-			</form>
+		<div class="gDown">
+			<a href="#showGroup" id="showGroup" class="optgroup onwhitebtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Group </a>
+			<!-- COLLAPSABLE FORM FOR NEW GROUP -->
+			<div id="submenu" style="margin-top: 20px;">
+				<form role="form" method="get" action="/addGroup">
+				  <div class="form-group">
+				     <label for="friends">Choose Your Friends</label><br> 
+				     <div> <span class="glyphicon glyphicon-chevron-up" style="margin-left:5px;"></span></div>	
+				     <div class="scrollable">
+					  {{#each friends}}
+					  <input type="checkbox" name="friend" value="{{name}}" style="margin-left: 10px; margin-right: 7px; padding: 5px;"> {{name}}<br>
+					  {{/each}}
+					</div>
+					<div> <span class="glyphicon glyphicon-chevron-down" style="margin-left:5px;"></span></div>	
+				  </div>
+				  <div class="form-group">
+				    <label for="name">Choose A Group Name</label>
+				    <input type="text" class="form-control" id="name" placeholder="[the best group ever]" name="name">
+				  </div>
+				  <div class="form-group">
+				    <label for="description">Description (Optional)</label>
+				    <input type="text" class="form-control" id="description" placeholder="teamwork makes the dream work..." name="description">
+				  </div>
+				  <input type="submit" id="submitBtn" class="btn optbtn" value="Add New Group"></input>
+				  <button class="btn cancel">Cancel</button>
+				</form>
+			</div>
 		</div>
 		
 	</div>
