@@ -23,13 +23,11 @@
 
 		<div class="row">
 
-			<button class="optbtn regbtn">Register</button>
-
-			<div class="center register">
+			<div class="center">
 				<div class="onehunnit col-md-6">
 			        <form method="get" action ="/register" class="pure-form pure-form-stacked">
 					    <fieldset>
-					    	<div>
+					    	<div class="register">
 						        <input style="text-align:center"required="" name ="emailSign" id="emailSign" type="email" placeholder="Email">
 
 						        <input style="text-align:center" required="" name="passwordSign" id="passwordSign" type="password" placeholder="Password">
@@ -37,60 +35,77 @@
 						        <input style="text-align:center" required="" name="passwordSign2" id="passwordSign2" type="password" placeholder="Confirm Password">
 					        </div>
 					        <div style="padding-top:5px">
-					       	 	<button type="submit" class="inputbtn">Register</button>
+					       	 	<button type="submit" class="inputbtn inputreg">Register</button>
 					    	</div>
 					    </fieldset>
 					</form>
 				</div>
 			</div>
 
-			<button class="optbtn loginbtn"><name>Login</name></button>
+			<button class="optbtn regbtn">Register</button>
 
-        	<div class="center login">
+			<div class="center login">
 			    <div class="onehunnit scol-md-6">
 			        <form method="get" action = "/homepage2" class="pure-form pure-form-stacked">
 					    <fieldset>
-					        <input style="text-align:center" required="" id="email" type="email" name="email" placeholder="Email">
+					    	<div>
+						        <input style="text-align:center" required="" id="email" type="email" name="email" placeholder="Email">
 
-					        <input style="text-align:center" required="" id="password" type="password" name="password" placeholder="Password">
+						        <input style="text-align:center" required="" id="password" type="password" name="password" placeholder="Password">
 
-					        <label id="remme" for="remember" class="pure-checkbox">
-					        <input id="remember" type="checkbox"> Remember Me
-					        </label>
+						        <label id="remme" for="remember" class="pure-checkbox">
+						        <input id="remember" type="checkbox"> Remember Me
+						        </label>
+					    	</div>
 
-					        <button type="submit" class="inputbtn login2">Login</button></br></br>
+					        <button type="submit" class="inputbtn inputlog">Login</button>
+					    </br></br>
 					    </fieldset>
 					</form>
 				</div>
 			</div>
+
+			<button class="optbtn loginbtn"><name>Login</name></button>
+			        	
 		</div>
     </div> <!-- End of Main -->
 
     <script>
-
     	$(document).ready(function() {
-			$(".login").hide();
-			//$(".register").hide();
+			$(".inputreg").hide();
+			$(".inputlog").hide();
 		});
 
-		$(".loginbtn").click(function(e) {
-	        e.preventDefault();
-	        $(".login").show();
-	        $(".loginbtn").hide();
-	        $(".register").hide();
-	        $(".regbtn").show();
-	    });
+		$('.regbtn').click(function () {
+			$(".regbtn").hide();
+		    if ($('.register').is(":hidden")) {
+		        $('.register').slideDown('slow');
+		        $(".inputreg").show();
+		    }
 
-	    $(".regbtn").click(function(e) {
-	        e.preventDefault();
-	        //$(".register").show();
-	        $(".register").addClass("registerform").removeClass("register");
-	        
-	        $(".regbtn").hide();
-	        $(".login").hide();
-	        $(".loginbtn").show();
-	    });
+		    if ($('.login').is(":visible")) {
+		        $('.login').slideUp('slow');
+		        $(".inputlog").hide();
+		    }
 
+		    $(".loginbtn").show();
+		});
+
+		$('.loginbtn').click(function () {
+			$(".loginbtn").hide();
+
+		    if ($('.login').is(":hidden")) {
+		        $('.login').slideDown('slow');
+		        $(".inputlog").show();
+		    }
+
+		    if ($('.register').is(":visible")) {
+		        $('.register').slideUp('slow');
+		        $(".inputreg").hide();
+		    }
+
+		    $(".regbtn").show();
+		});
 
     </script>
 </body>

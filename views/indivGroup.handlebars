@@ -79,7 +79,11 @@
 	<script>
 		$(".cancel").click(function(e) {
  	        e.preventDefault();
- 	        $("#submenu").hide();
+ 	        //$("#submenu").hide();
+
+ 	        if ($('#submenu').is(":visible")) {
+		        $('#submenu').slideUp('slow');
+		    }
  	    });
 
 
@@ -87,6 +91,7 @@
 	        e.preventDefault();
 	        $(".cd-popup").addClass("is-visible");
 	    });
+
 	    $("#keep").click(function(e) {
 	        e.preventDefault();
 	        $(".cd-popup").removeClass("is-visible");
@@ -95,12 +100,21 @@
 		$('li.submenu')
 		.css({cursor: "pointer"})
 		.on('click', function(){
-		  $(this).next('ul').toggle();
+			  //$(this).next('ul').toggle();
+			  if ($(this).next('ul').is(":visible")) {
+			        $(this).next('ul').slideUp('slow');
+			  }
+			  else {
+			  		$(this).next('ul').slideDown('slow');
+			  }
 		});
 
 		$("#edit-group").click(function(e){
 			e.preventDefault();
-			$("#submenu").toggle();
+			//$("#submenu").toggle();
+			if ($('#submenu').is(":hidden")) {
+		        $('#submenu').slideDown('slow');
+		    }
 		});
 
 		$(document).ready(function() {

@@ -52,7 +52,7 @@ body {
     font-weight: 900;
     margin: 20px auto;
     padding: 15px 0px;
-    width: 80%;
+    width: 100%;
 }
 
 .inputbtn {
@@ -80,7 +80,7 @@ name {
     color: black;
 }
 
-.login2 {
+.inputlog {
     background-color: #ffffff;
     color: black;
     opacity: 0.9;
@@ -123,7 +123,7 @@ name {
 }
 
 .login {
-
+    display: none;
 }
 
 @media only screen and (min-width: 600px){

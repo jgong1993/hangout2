@@ -151,18 +151,32 @@
 			{{/each}}
 			$("#submenu").hide();
 		});
+
 		$("tr").click(function() {
 			var eventID = $(this).closest('tr').attr('id');
 			var isHidden = $(eventID).is( ":hidden" );
 			if(isHidden){
 				$("#p"+eventID).show();
 			}else{
-				$("#p"+eventID).toggle();
+				//$("#p"+eventID).toggle();
+				if ($("#p"+eventID).is(":visible")) {
+			        $("#p"+eventID).slideUp('slow');
+			    }
+			    else {
+			    	$("#p"+eventID).slideDown('slow');
+			    }
 			}
 		});
+
 		$("#showGroup").click(function(e) {
 	        e.preventDefault();
-	        $("#submenu").toggle();
+	        //$("#submenu").toggle();
+	        if ($('#submenu').is(":visible")) {
+		        $('#submenu').slideUp('slow');
+		    }
+		    else {
+		    	$('#submenu').slideDown('slow');
+		    }
 	    });
     </script>
     {{> googleAnalytics}}

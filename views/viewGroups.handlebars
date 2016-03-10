@@ -62,12 +62,20 @@
 
 		$(".cancel").click(function(e) {
  	        e.preventDefault();
- 	        $("#submenu").hide();
+ 	        // $("#submenu").hide();
+
+ 	        if ($('#submenu').is(":visible")) {
+		        $('#submenu').slideUp('slow');
+		    }
  	    });
 
 		$("#showGroup").click(function(e) {
 	        e.preventDefault();
-	        $("#submenu").toggle();
+	        // $("#submenu").toggle();
+
+	        if ($('#submenu').is(":hidden")) {
+		        $('#submenu').slideDown('slow');
+		    }
 	    });
     </script>
     {{> googleAnalytics}}
