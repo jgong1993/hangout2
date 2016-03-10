@@ -70,7 +70,7 @@
 
     	$(document).ready(function() {
 			$(".login").hide();
-			$(".register").hide();
+			//$(".register").hide();
 		});
 
 		$(".loginbtn").click(function(e) {
@@ -83,7 +83,8 @@
 
 	    $(".regbtn").click(function(e) {
 	        e.preventDefault();
-	        $(".register").show();
+	        //$(".register").show();
+	        $(".register").addClass("registerform").removeClass("register");
 	        
 	        $(".regbtn").hide();
 	        $(".login").hide();
