@@ -137,12 +137,19 @@
 					$('.outershellGallery').children().not(eventID).hide();
 					var isHidden = $(eventID).is( ":hidden" );
 					if(isHidden){
-						$(eventID).show(); 
+						//$(eventID).show(); 
+						$(eventID).slideDown('slow');
 						if ($(eventID).is(':visible')) {
 							$("html, body").animate({scrollTop: $(eventID).offset().top});
 						}
 					}else{
-						$(eventID).toggle(); 
+						//$(eventID).toggle(); 
+						if ($(eventID).is(":visible")) {
+					        $(eventID).slideUp('slow');
+					    }
+					    else {
+					    	$(eventID).slideDown('slow');
+					    }
 					}
 					return false;
 		    	},
