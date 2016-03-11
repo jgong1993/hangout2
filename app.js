@@ -46,6 +46,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.viewIndex);
 app.get('/addGroup', addGroup.addNewGroup);
+app.get('/deleteEvent/:eventTitle', events.deleteEvent);
 app.get('/editGroup', indivGroup.editGroup);
 app.get('/gallery', gallery.viewGallery);
 app.get('/gallery/:groupName', gallery.viewGroupGallery);

@@ -4,6 +4,7 @@
 <head>
 	<title>hangouts R us - Plan an Event</title>	
 	{{> imports}}
+	<link href="/css/groups.css" rel="stylesheet"> 
 </head>
 <body>
 	<div class="container-fluid">
@@ -16,9 +17,58 @@
 		<h3>Group: {{group}}</h3>
 		<h3>When: {{when}}</h3>
 		<h3>Friends who are attending: {{whoisgoing}}</h3>
+
+		<a href="#" class="btn cancel" style="color:white;float:left;padding-top:10px" class="glyphicon glyphicon-remove" id="leavegrp"></span> Delete Event</a></li>
+		<br><br><br>
+		<div class="cd-popup" role="alert">
+			<div class="cd-popup-container">
+				<p style="color:black;">Are you sure you want to delete this event?</p><br><br>
+				<ul style="padding-top:10px; padding-left:0px"class="cd-buttons">
+					<li id="keep"><a href="#">Keep Event</a></li>
+					<li><a href="/deleteEvent/{{eventTitle}}">Delete Event</a></li>
+				</ul>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-popup -->
+
 	</div>
+
+
+
 	{{> footer}}
     <script src="/js/introHCI.js"></script>
+    <script>
+		$(".cancel").click(function(e) {
+ 	        e.preventDefault();
+ 	        //$("#submenu").hide();
+
+ 	        if ($('#submenu').is(":visible")) {
+		        $('#submenu').slideUp('slow');
+		    }
+ 	    });
+
+
+		$("#leavegrp").click(function(e) {
+	        e.preventDefault();
+	        $(".cd-popup").addClass("is-visible");
+	    });
+
+	    $("#keep").click(function(e) {
+	        e.preventDefault();
+	        $(".cd-popup").removeClass("is-visible");
+	    });
+	    
+		$('li.submenu')
+		.css({cursor: "pointer"})
+		.on('click', function(){
+			  //$(this).next('ul').toggle();
+			  if ($(this).next('ul').is(":visible")) {
+			        $(this).next('ul').slideUp('slow');
+			  }
+			  else {
+			  		$(this).next('ul').slideDown('slow');
+			  }
+		});
+	</script>
     {{> googleAnalytics}}
 </body>
 </html>

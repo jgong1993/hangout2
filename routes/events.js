@@ -88,3 +88,20 @@ exports.viewGroupsPastEvents = function(req, res){
 	} 
 	res.render('groupsPastEvents', groupsEvents);
 };
+
+exports.deleteEvent = function(req,res) {
+
+	var currEvent = req.params.eventTitle;
+	var len = eventTest.groups2.length;
+	for(var i = 0; i < len; i++) {
+		if(typeof eventTest["groups2"][i] === 'undefined') {
+			continue;
+		}
+		else if(eventTest["groups2"][i].title == currEvent) {
+			delete eventTest["groups2"][i];
+			eventTest["groups2"].splice(i,1);
+			break;
+		}
+	}
+	res.render('upcomingEvents', eventTest);
+};
