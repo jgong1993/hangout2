@@ -3,13 +3,14 @@ var groupJSON = require("../public/json/groups.json");
 
 exports.addNewEvent = function(req, res) {    
 		// var origName = req.query.group;
+		console.log(req.query);
 		 var orig = eventTest.groups2[eventTest.groups2.length-1].id;
 		 var neworig = orig.slice(1,orig.length);
 		 var newvar = 'e' + (parseInt(neworig) +1);
 		 
 		 var newWhen = req.query.when;
-		 var newStart = newWhen + 'T00:00:00';
-		 var newEnd = newWhen + 'T01:00:00';
+		 var newStart = newWhen + 'T' + req.query.whatTime1+ ':00';
+		 var newEnd = newWhen + 'T' + req.query.whatTime2+ ':00';
 		 if( newWhen == ''){
 		 	newWhen = 'No date, yo';
 		 }
