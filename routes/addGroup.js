@@ -7,7 +7,9 @@ exports.addNewGroup = function(req, res) { 
 	var friend = req.query.friend;
 	var name = req.query.name;
 	var description = req.query.description;
-	var obj = { "name": name, "members": friend, "description": description };
+	var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+	var obj = { "name": name, "members": friend, "description": description ,"color": randomColor};
+
 	console.log("req.query.name: " +req.query.name);
 	console.log("req.query.description: " +req.query.description);
 	console.log("name: " +name);

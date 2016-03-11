@@ -3,27 +3,32 @@
 		{
 			"name": "Trash Squad",
 			"members": ["Diana", "Ivy", "Kathy"],
-			"description": "The homies"
+			"description": "The homies",
+			"color" : "#f79f79"
 		},
 		{
 			"name": "Opera Fam",
 			"members": ["Amanda", "Bryan", "David", "Johnson"],
-			"description": "Ahhhhhh, ok. We be singing"
+			"description": "Ahhhhhh, ok. We be singing",
+			"color" : "#d84797"
 		},
 				{
 			"name": "Amanda's Room",
 			"members": ["Amanda", "Bryan", "David", "Johnson","Kathy","Will"],
-			"description": "Not sure why Amanda has her own room"
+			"description": "Not sure why Amanda has her own room",
+			"color" : "#2D0320"
 		},
 		{
 			"name": "Team Marvel",
 			"members": ["Cap Rogers", "Deadpool", "Iron Man"],
-			"description": "Fighting crime in our dreams"
+			"description": "Fighting crime in our dreams",
+			"color" : "#87b6a7"
 		},
 		{
 			"name": "Puppy Bowl",
 			"members": ["Charlie", "Portland"],
-			"description": "Puppiessssssss"
+			"description": "Puppiessssssss",
+			"color" : "#5b5941"
 		}
 	],
 	"friends": [

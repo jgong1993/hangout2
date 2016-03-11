@@ -1,4 +1,6 @@
 var eventTest = require("../public/json/eventTest.json");
+var groupJSON = require("../public/json/groups.json");
+
 exports.addNewEvent = function(req, res) {    
 		// var origName = req.query.group;
 		 var orig = eventTest.groups2[eventTest.groups2.length-1].id;
@@ -19,6 +21,14 @@ exports.addNewEvent = function(req, res) { 
 		 		break;
 		 	}
 		 }
+
+		 var gColor = '';
+		 var j;
+		 for(j = 0; j < groupJSON.groups.length; j++) {
+		 	if(groupJSON["groups"][j].name == req.query.group) {
+		 		gColor = groupJSON["groups"][j].color;
+		 	}
+		 }
 		 eventTest['groups2'].push({
 		 	id: newvar,
 		 	title: req.query.title,
@@ -27,7 +37,8 @@ exports.addNewEvent = function(req, res) { 
 		 	whoisgoing : going,
 		 	start: newStart,
 		 	end: newEnd,
-		 	imageURL: []
+		 	imageURL: [],
+		 	color: gColor
 		 });
 		res.render('upcomingEvents', eventTest);
  }
